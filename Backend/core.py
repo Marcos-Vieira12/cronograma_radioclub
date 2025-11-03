@@ -2,7 +2,6 @@
 from typing import Dict, Any
 from io import BytesIO
 import copy
-from sqlalchemy import create_engine
 from lib import (
     carregar_catalogo,
     calcular_pesos_aulas,
