@@ -45,7 +45,7 @@ const handleDownload = async () => {
 
   try {
     // 🔹 Passo 5: Enviar o JSON pro backend e receber o PDF
-    const response = await fetch("https://cronograma-radioclub.onrender.com/cronograma/pfd", {
+    const response = await fetch("https://cronograma-radioclub.onrender.com/cronograma/pdf", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
