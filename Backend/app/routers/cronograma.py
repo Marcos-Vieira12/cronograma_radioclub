@@ -44,7 +44,7 @@ def gerar(form: FormularioAluno):
             conn.commit()
 
         # 4️⃣ Retorna sucesso
-        return {"mensagem": "Deu bom meu camarada 😎"}
+        return {"message": "SHOW!! agora nosso time de especialistas vai criar o seu cronograma e em breve te enviaremos por email 😁"}
 
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))

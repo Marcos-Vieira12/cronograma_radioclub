@@ -34,7 +34,7 @@ export interface formQuestion {
 /**
  * Identifies the current step of the multi-step form.
  */
-export type Step = "part1" | "part2" | "part3" | "cronograma";
+export type Step = "part1" | "part2" | "part3";
 
 /**
  * Represents a collection of responses within a specific form part.

@@ -18,25 +18,23 @@ import { Part3 } from "./components/Part3";
 import { Cronograma } from "./components/Cronograma";
 import type { PartData, formQuestion, Step } from "./types/types";
 import './App.css'
-
+import Swal from "sweetalert2";
 /**
  * Maps each step to the next step in the workflow.
  */
 const NEXT_STATE: Record<Step, Step> = {
   part1: "part2",
   part2: "part3",
-  part3: "cronograma",
-  cronograma: "part1",
+  part3: "part1",
 };
 
 /**
  * Maps each step to the previous step in the workflow.
  */
 const PREV_STATE: Record<Step, Step> = {
-  part1: "cronograma",
+  part1: "part3",
   part2: "part1",
   part3: "part2",
-  cronograma: "part3",
 };
 
 export default function App() {
@@ -83,6 +81,88 @@ export default function App() {
     setStep(PREV_STATE[part]);
   };
 
+  const handleUpload = async (formData: any[]) => {
+  // 🔹 Passo 1: Extrair respostas de todas as partes
+  const respostas: Record<string, any> = {};
+
+  formData.forEach((part: any) => {
+    if (!Array.isArray(part.data)) return; // evita erro se part.data for undefined
+    part.data.forEach((q: any) => {
+      // Ignora email e nível na lista de respostas
+      if (q.id === "email" || q.id === "level") return;
+
+      if (q.answer !== undefined && q.answer !== null && q.answer !== "") {
+        respostas[q.question] = q.answer;
+      }
+    });
+  });
+
+  // 🔹 Passo 2: Extrair email e nível (tratando partes sem .data)
+  const allQuestions = formData.flatMap((p: any) =>
+    Array.isArray(p.data) ? p.data : []
+  );
+
+  const email =
+    allQuestions.find((q: any) => q.id === "email")?.answer || "";
+  const nivel =
+    allQuestions.find((q: any) => q.id === "level")?.answer || "";
+
+  // 🔹 Passo 3: Gerar ID aleatório
+  const respondent_id = Math.random().toString(36).substring(2, 8);
+
+  // 🔹 Passo 4: Montar o JSON no formato do backend
+  const formatted = {
+    respondent_id,
+    nivel,
+    email,
+    respostas,
+  };
+
+  // 🔹 Passo 5: Mostrar Swal de carregamento
+  Swal.fire({
+    title: "Gerando seu cronograma...",
+    text: "Por favor, aguarde enquanto salvamos seus dados.",
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    didOpen: () => Swal.showLoading(),
+  });
+
+  try {
+    const response = await fetch(
+      "https://cronograma-radioclub.onrender.com/cronograma",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formatted),
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Erro ao salvar cronograma");
+    }
+
+    Swal.fire({
+      icon: "success",
+      title: data.message || "SHOW! agora nosso time de especialistas vai criar o seu cronograma e em breve te enviaremos por email 😁",
+      confirmButtonText: "OK",
+      confirmButtonColor: "#3085d6",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+    });
+  } catch (error: any) {
+    console.error("Erro ao salvar cronograma:", error);
+    Swal.fire({
+      icon: "error",
+      title: "Erro ao salvar cronograma",
+      text: error.message || "Verifique o servidor e tente novamente.",
+      confirmButtonText: "Fechar",
+      confirmButtonColor: "#d33",
+    });
+  }
+};
+
   // ======= Conditional Rendering =======
 
   return (
@@ -111,18 +191,9 @@ export default function App() {
       {/* === Part 3 === */}
       {step === "part3" && (
         <Part3
-          onNext={(data) => handleNext("part3", data)}
+          onNext={(data) => handleUpload(formData)}
           onPrev={() => handlePrev("part3")}
           InitialData={formData.find(p => p.part === "part3")?.data}
-        />
-      )}
-
-      {/* === Schedule (Cronograma) === */}
-      {step === "cronograma" && (
-        <Cronograma
-          onNext={(data) => handleNext("cronograma", data)}
-          onPrev={() => handlePrev("cronograma")}
-          data = {formData}
         />
       )}
     </div>
