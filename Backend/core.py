@@ -2,7 +2,7 @@
 from typing import Dict, Any
 from io import BytesIO
 import copy
-
+from sqlalchemy import create_engine
 from lib import (
     carregar_catalogo,
     calcular_pesos_aulas,
@@ -23,6 +23,7 @@ def run_cronograma(form_json: Dict[str, Any]) -> Dict[str, Any]:
 
     if not email or not nivel:
         raise ValueError("Campos obrigatórios: email, nivel")
+
 
     catalogo = carregar_catalogo()
 
