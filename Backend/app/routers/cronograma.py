@@ -3,8 +3,13 @@ from fastapi import APIRouter, HTTPException
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from typing import Dict, Any, Optional
-
 from core import run_cronograma, run_pdf
+import os
+import json
+from dotenv import load_dotenv
+load_dotenv()
+from sqlalchemy import create_engine, text
+engine = create_engine(os.getenv("DB_URL"))
 
 router = APIRouter(prefix="/cronograma", tags=["cronograma"])
 
@@ -18,18 +23,41 @@ class FormularioAluno(BaseModel):
 @router.post("")
 def gerar(form: FormularioAluno):
     try:
-        return run_cronograma(form.model_dump())
+        # 1️⃣ Gera o cronograma
+        resultado = run_cronograma(form.model_dump())
+
+        # 2️⃣ Serializa os campos JSON (respostas e cronograma)
+        dados = {
+            "email": form.email,
+            "nivel": form.nivel,
+            "respostas": json.dumps(form.respostas),
+            "cronograma": json.dumps(resultado),
+        }
+
+        # 3️⃣ Insere no banco
+        with engine.connect() as conn:
+            query = text("""
+                INSERT INTO cronogramas (email, nivel, respostas, cronograma)
+                VALUES (:email, :nivel, :respostas, :cronograma)
+            """)
+            conn.execute(query, dados)
+            conn.commit()
+
+        # 4️⃣ Retorna sucesso
+        return {"mensagem": "Deu bom meu camarada 😎"}
+
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
-
+    
 @router.post("/pdf")
-def gerar_pdf(form: FormularioAluno):
+def gerar_pdf(cronograma_json: Dict[str, Any]):
     try:
-        pdf_io = run_pdf(form.model_dump())
+        pdf_io = run_pdf(cronograma_json)
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-    filename = f'cronograma_{form.email}.pdf'.replace("\n", "_").replace("\r", "_")
+    filename = f"cronograma_{cronograma_json.get('email', 'arquivo')}.pdf"
+    filename = filename.replace("\n", "_").replace("\r", "_")
     return StreamingResponse(
         pdf_io,
         media_type="application/pdf",

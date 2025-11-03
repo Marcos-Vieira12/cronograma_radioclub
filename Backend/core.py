@@ -78,14 +78,15 @@ def run_cronograma(form_json: Dict[str, Any]) -> Dict[str, Any]:
         "params": {"tempo_min_semana": tempo_min, "tempo_max_semana": tempo_max},
     }
 
-def run_pdf(form_json: Dict[str, Any]) -> BytesIO:
-    plano = run_cronograma(form_json)
-    n = plano["semanas"]
+def run_pdf(cronograma_json: Dict[str, Any]) -> BytesIO:
+    n = cronograma_json.get("semanas", 0)
     semanas = [[] for _ in range(n)]
-    for it in plano["itens"]:
-        semanas[it["semana"] - 1].append({
-            "module_name": it["module_name"],
-            "lesson_theme": it["lesson_theme"],
-            "duration_min": it["duration_min"],
-        })
+    for item in cronograma_json.get("itens", []):
+        semana_idx = item.get("semana", 0) - 1
+        if 0 <= semana_idx < n:
+            semanas[semana_idx].append({
+                "module_name": item.get("module_name"),
+                "lesson_theme": item.get("lesson_theme"),
+                "duration_min": item.get("duration_min"),
+            })
     return gerar_pdf_bytes(semanas)
