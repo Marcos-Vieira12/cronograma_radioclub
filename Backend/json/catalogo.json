@@ -1,0 +1,5443 @@
+[
+  {
+    "id": "AUL-0001",
+    "module_name": "RX de Tórax",
+    "lesson_theme": "Anatomia e Avaliação Sistematizada",
+    "duration_min": 28,
+    "subspecialty": "Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0002",
+    "module_name": "RX de Tórax",
+    "lesson_theme": "Devices",
+    "duration_min": 29,
+    "subspecialty": "Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0003",
+    "module_name": "RX de Tórax",
+    "lesson_theme": "Pneumonias e Tuberculose",
+    "duration_min": 60,
+    "subspecialty": "Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0004",
+    "module_name": "RX de Tórax",
+    "lesson_theme": "Asma e DPOC",
+    "duration_min": 29,
+    "subspecialty": "Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0005",
+    "module_name": "RX de Tórax",
+    "lesson_theme": "Trauma",
+    "duration_min": 23,
+    "subspecialty": "Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0006",
+    "module_name": "RX de Tórax",
+    "lesson_theme": "Indo Além do Pulmão",
+    "duration_min": 38,
+    "subspecialty": "Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0007",
+    "module_name": "Anatomia Radiológica",
+    "lesson_theme": "Anatomia Radiológica: Crânio",
+    "duration_min": 19,
+    "subspecialty": "Anatomia / Neuro",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "subespecialidade_anatomia": 1.0
+    }
+  },
+  {
+    "id": "AUL-0008",
+    "module_name": "Anatomia Radiológica",
+    "lesson_theme": "Anatomia Radiológica: Ossos temporais",
+    "duration_min": 37,
+    "subspecialty": "Anatomia / Cabeça e Pescoço",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0,
+      "subespecialidade_anatomia": 1.0
+    }
+  },
+  {
+    "id": "AUL-0009",
+    "module_name": "Anatomia Radiológica",
+    "lesson_theme": "Anatomia Radiológica: Seios da Face",
+    "duration_min": 14,
+    "subspecialty": "Anatomia / Cabeça e Pescoço",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0,
+      "subespecialidade_anatomia": 1.0
+    }
+  },
+  {
+    "id": "AUL-0010",
+    "module_name": "Anatomia Radiológica",
+    "lesson_theme": "Anatomia Radiológica: Face e Pescoço",
+    "duration_min": 15,
+    "subspecialty": "Anatomia / Cabeça e Pescoço",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0,
+      "subespecialidade_anatomia": 1.0
+    }
+  },
+  {
+    "id": "AUL-0011",
+    "module_name": "Anatomia Radiológica",
+    "lesson_theme": "Anatomia Radiológica: Abdome",
+    "duration_min": 21,
+    "subspecialty": "Anatomia / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_anatomia": 1.0
+    }
+  },
+  {
+    "id": "AUL-0012",
+    "module_name": "Anatomia Radiológica",
+    "lesson_theme": "Anatomia Radiológica: Tórax",
+    "duration_min": 24,
+    "subspecialty": "Anatomia / Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_anatomia": 1.0
+    }
+  },
+  {
+    "id": "AUL-0013",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Raio-X de Tórax: Dicas de Técnica e Posicionamento",
+    "duration_min": 31,
+    "subspecialty": "Posicionamento/Técnica - Raio-X / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0014",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Raio-X de Ombro: dicas de técnica e posicionamento",
+    "duration_min": 28,
+    "subspecialty": "Posicionamento/Técnica - Raio-X / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0015",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Raio-x de Cotovelo: dicas de técnica e posicionamento",
+    "duration_min": 12,
+    "subspecialty": "Posicionamento/Técnica - Raio-X / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0016",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Raio-X de Braço: dicas de técnica e posicionamento",
+    "duration_min": 12,
+    "subspecialty": "Posicionamento/Técnica - Raio-X / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0017",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Raio-X de Antebraço: dicas de técnica e posicionamento",
+    "duration_min": 4,
+    "subspecialty": "Posicionamento/Técnica - Raio-X / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0018",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Raio-X de Punho: dicas de técnica e posicionamento",
+    "duration_min": 13,
+    "subspecialty": "Posicionamento/Técnica - Raio-X / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0019",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Raio-X de Cintura Pélvica e Quadril: dicas de técnica e posicionamento",
+    "duration_min": 25,
+    "subspecialty": "Posicionamento/Técnica - Raio-X / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0020",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Raio-X de Fêmur: dicas de técnica e posicionamento",
+    "duration_min": 8,
+    "subspecialty": "Posicionamento/Técnica - Raio-X / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0021",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Raio-X de Joelho: dicas de técnica e posicionamento",
+    "duration_min": 20,
+    "subspecialty": "Posicionamento/Técnica - Raio-X / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0022",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Raio-X de Perna: dicas de técnica e posicionamento",
+    "duration_min": 6,
+    "subspecialty": "Posicionamento/Técnica - Raio-X / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0023",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Dispositivos abdominopélvicos: como identificar?",
+    "duration_min": 36,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0024",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Como avaliar um RX de tórax?",
+    "duration_min": 13,
+    "subspecialty": "Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0025",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Como avaliar um RX de joelho?",
+    "duration_min": 17,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0026",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Como avaliar um RX de coluna cervical?",
+    "duration_min": 15,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0027",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Artrose cervical",
+    "duration_min": 13,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0028",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Como avaliar um RX de coluna lombar?",
+    "duration_min": 14,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0029",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Artrose lombar",
+    "duration_min": 19,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0030",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Como avaliar lise ístmica no RX de coluna lombar?",
+    "duration_min": 5,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0031",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Como avaliar Raio-X de quadril + alterações degenerativas",
+    "duration_min": 17,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0032",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Artrose do Joelho",
+    "duration_min": 12,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0033",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Densitometria Óssea - Parte 1",
+    "duration_min": 13,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_densitometria": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0034",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Densitometria Óssea - Parte 2",
+    "duration_min": 7,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_densitometria": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0035",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Densitometria Óssea: revisão da diretriz brasileira",
+    "duration_min": 13,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_densitometria": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0036",
+    "module_name": "Iniciando no RX e Densitometria Óssea",
+    "lesson_theme": "Artrite Reumatoide na imagem: o que eu preciso saber?",
+    "duration_min": 23,
+    "subspecialty": "Musculoesquelético/Reumatologia",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_reumatolgia": 1.0
+    }
+  },
+  {
+    "id": "AUL-0037",
+    "module_name": "No Plantão",
+    "lesson_theme": "Anatomia - TC de Abdome",
+    "duration_min": 12,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0038",
+    "module_name": "No Plantão",
+    "lesson_theme": "Anatomia - TC de Tórax",
+    "duration_min": 11,
+    "subspecialty": "Geral / Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0039",
+    "module_name": "No Plantão",
+    "lesson_theme": "Anatomia - TC e Coluna Lombar",
+    "duration_min": 23,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0040",
+    "module_name": "No Plantão",
+    "lesson_theme": "Anatomia - TC de Crânio Normal",
+    "duration_min": 27,
+    "subspecialty": "Geral / Neuro",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0041",
+    "module_name": "No Plantão",
+    "lesson_theme": "Anatomia - TC de Seios da Face",
+    "duration_min": 14,
+    "subspecialty": "Geral / Cabeça e Pescoço",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_angio": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0042",
+    "module_name": "No Plantão",
+    "lesson_theme": "Aneurisma - Teoria",
+    "duration_min": 13,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_angio": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0043",
+    "module_name": "No Plantão",
+    "lesson_theme": "Aneurisma - Prática",
+    "duration_min": 5,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0044",
+    "module_name": "No Plantão",
+    "lesson_theme": "Apendicite - Teoria",
+    "duration_min": 10,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0045",
+    "module_name": "No Plantão",
+    "lesson_theme": "Apendicite - Prática",
+    "duration_min": 4,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0046",
+    "module_name": "No Plantão",
+    "lesson_theme": "Dissecção - Teoria",
+    "duration_min": 11,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0047",
+    "module_name": "No Plantão",
+    "lesson_theme": "Dissecção - Prática",
+    "duration_min": 5,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_angio": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0048",
+    "module_name": "No Plantão",
+    "lesson_theme": "Diverticulite - Teoria",
+    "duration_min": 12,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0049",
+    "module_name": "No Plantão",
+    "lesson_theme": "Diverticulite - Prática",
+    "duration_min": 4,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0050",
+    "module_name": "No Plantão",
+    "lesson_theme": "Nefrolitíase - Teoria",
+    "duration_min": 11,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0051",
+    "module_name": "No Plantão",
+    "lesson_theme": "Nefrolitíase - Prática",
+    "duration_min": 4,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0052",
+    "module_name": "No Plantão",
+    "lesson_theme": "Obstrução do Cólon- Teoria",
+    "duration_min": 9,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0053",
+    "module_name": "No Plantão",
+    "lesson_theme": "Obstrução do Cólon - Prática",
+    "duration_min": 4,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0054",
+    "module_name": "No Plantão",
+    "lesson_theme": "Obstrução Delgado - Teoria",
+    "duration_min": 11,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0055",
+    "module_name": "No Plantão",
+    "lesson_theme": "Obstrução Delgado - Prática",
+    "duration_min": 5,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0056",
+    "module_name": "No Plantão",
+    "lesson_theme": "Pancreatite Teoria",
+    "duration_min": 11,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0057",
+    "module_name": "No Plantão",
+    "lesson_theme": "Pancreatite Prática",
+    "duration_min": 3,
+    "subspecialty": "Geral / Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0058",
+    "module_name": "No Plantão",
+    "lesson_theme": "Pneumonia - Teoria",
+    "duration_min": 13,
+    "subspecialty": "Geral / Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0059",
+    "module_name": "No Plantão",
+    "lesson_theme": "Pneumonia - Prática",
+    "duration_min": 3,
+    "subspecialty": "Geral / Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0060",
+    "module_name": "No Plantão",
+    "lesson_theme": "TEP - Teoria",
+    "duration_min": 9,
+    "subspecialty": "Geral / Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_angio": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0061",
+    "module_name": "No Plantão",
+    "lesson_theme": "TEP - Prática",
+    "duration_min": 4,
+    "subspecialty": "Geral / Tórax",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_angio": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0062",
+    "module_name": "No Plantão",
+    "lesson_theme": "AVC - Teoria",
+    "duration_min": 13,
+    "subspecialty": "Geral / Neuro",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0063",
+    "module_name": "No Plantão",
+    "lesson_theme": "AVC - Prática",
+    "duration_min": 11,
+    "subspecialty": "Geral / Neuro",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0064",
+    "module_name": "No Plantão",
+    "lesson_theme": "Sinal da ACM Hiperdensa - Prática",
+    "duration_min": 16,
+    "subspecialty": "Geral / Neuro",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0065",
+    "module_name": "No Plantão",
+    "lesson_theme": "Contusão Cerebral - Prática",
+    "duration_min": 9,
+    "subspecialty": "Geral / Neuro",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0066",
+    "module_name": "No Plantão",
+    "lesson_theme": "Raio-X de Punho Normal",
+    "duration_min": 9,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0067",
+    "module_name": "No Plantão",
+    "lesson_theme": "Raio-X de Coluna Lombar",
+    "duration_min": 12,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0068",
+    "module_name": "No Plantão",
+    "lesson_theme": "Fratura Benigna Vertebral - Prática",
+    "duration_min": 7,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0069",
+    "module_name": "No Plantão",
+    "lesson_theme": "Fratura de Colles - Prática",
+    "duration_min": 5,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0070",
+    "module_name": "No Plantão",
+    "lesson_theme": "Fratura de Colo Femoral - Prática",
+    "duration_min": 4,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0071",
+    "module_name": "No Plantão",
+    "lesson_theme": "Fratura de Escafoide - Prática",
+    "duration_min": 5,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0072",
+    "module_name": "No Plantão",
+    "lesson_theme": "Fratura de Fêmur - Prática",
+    "duration_min": 10,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0073",
+    "module_name": "No Plantão",
+    "lesson_theme": "Fratura Maligna da Coluna - Prática",
+    "duration_min": 6,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0074",
+    "module_name": "No Plantão",
+    "lesson_theme": "Fratura de Colua",
+    "duration_min": 15,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0075",
+    "module_name": "No Plantão",
+    "lesson_theme": "Fratura de Rádio",
+    "duration_min": 9,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0076",
+    "module_name": "No Plantão",
+    "lesson_theme": "TCE - Prática",
+    "duration_min": 15,
+    "subspecialty": "Geral / Neuro",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0077",
+    "module_name": "No Plantão",
+    "lesson_theme": "Lise Ístmica - Prática",
+    "duration_min": 5,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0078",
+    "module_name": "No Plantão",
+    "lesson_theme": "Luxação Acromioclavicular - Prática",
+    "duration_min": 7,
+    "subspecialty": "Geral / Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0079",
+    "module_name": "No Plantão",
+    "lesson_theme": "Hemorragia Extradural",
+    "duration_min": 11,
+    "subspecialty": "Geral / Neuro",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0080",
+    "module_name": "No Plantão",
+    "lesson_theme": "Hemorragia Subaracnoide e Subdural",
+    "duration_min": 16,
+    "subspecialty": "Geral / Neuro",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0081",
+    "module_name": "No Plantão",
+    "lesson_theme": "Sinusopatia - Teoria",
+    "duration_min": 10,
+    "subspecialty": "Geral / Cabeça e Pescoço",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0082",
+    "module_name": "No Plantão",
+    "lesson_theme": "Sinusopatia - Prática",
+    "duration_min": 12,
+    "subspecialty": "Geral / Cabeça e Pescoço",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0,
+      "subespecialidade_geral": 1.5
+    }
+  },
+  {
+    "id": "AUL-0083",
+    "module_name": "Física (Einstein)",
+    "lesson_theme": "Raio-X - Parte 1",
+    "duration_min": 13,
+    "subspecialty": "Física",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.5,
+      "subespecialidade_fisica_medica": 2.0
+    }
+  },
+  {
+    "id": "AUL-0084",
+    "module_name": "Física (Einstein)",
+    "lesson_theme": "Raio-X - Parte 2",
+    "duration_min": 17,
+    "subspecialty": "Física",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.5,
+      "subespecialidade_fisica_medica": 2.0
+    }
+  },
+  {
+    "id": "AUL-0085",
+    "module_name": "Física (Einstein)",
+    "lesson_theme": "Ultrassom - Parte 1",
+    "duration_min": 31,
+    "subspecialty": "Física",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.5,
+      "subespecialidade_fisica_medica": 2.0
+    }
+  },
+  {
+    "id": "AUL-0086",
+    "module_name": "Física (Einstein)",
+    "lesson_theme": "Ultrassom - Parte 2",
+    "duration_min": 25,
+    "subspecialty": "Física",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.5,
+      "subespecialidade_fisica_medica": 2.0
+    }
+  },
+  {
+    "id": "AUL-0087",
+    "module_name": "Física (Einstein)",
+    "lesson_theme": "Tomografia - Parte 1",
+    "duration_min": 20,
+    "subspecialty": "Física",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.5,
+      "subespecialidade_fisica_medica": 2.0
+    }
+  },
+  {
+    "id": "AUL-0088",
+    "module_name": "Física (Einstein)",
+    "lesson_theme": "Tomografia - Parte 2",
+    "duration_min": 26,
+    "subspecialty": "Física",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.5,
+      "subespecialidade_fisica_medica": 2.0
+    }
+  },
+  {
+    "id": "AUL-0089",
+    "module_name": "Física (Einstein)",
+    "lesson_theme": "Ressonância - Parte 1",
+    "duration_min": 28,
+    "subspecialty": "Física",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rm": 1.5,
+      "subespecialidade_fisica_medica": 2.0
+    }
+  },
+  {
+    "id": "AUL-0090",
+    "module_name": "Física (Einstein)",
+    "lesson_theme": "Ressonância - Parte 2",
+    "duration_min": 27,
+    "subspecialty": "Física",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rm": 1.5,
+      "subespecialidade_fisica_medica": 2.0
+    }
+  },
+  {
+    "id": "AUL-0091",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Primeiros passos na TC de abdome",
+    "duration_min": 30,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0092",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Segmentação hepática",
+    "duration_min": 19,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0093",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Abdome Agudo Inflamatório - Parte 1",
+    "duration_min": 19,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0094",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Abdome Agudo Inflamatório - Parte 2",
+    "duration_min": 17,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0095",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Abdome Agudo Obstrutivo",
+    "duration_min": 21,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0096",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Abdome Agudo Perfurativo",
+    "duration_min": 22,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0097",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Abdome agudo inflamatório na TC: casos básicos",
+    "duration_min": 13,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0098",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Panceatite Aguda",
+    "duration_min": 25,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0099",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Lesões Cìsticas Pancreáticas",
+    "duration_min": 19,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0100",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "AngioTC de Aorta",
+    "duration_min": 41,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_angio": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0101",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Aneurisma de Aorta Abdominal",
+    "duration_min": 33,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_angio": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0102",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Facomatoses - Parte 1",
+    "duration_min": 18,
+    "subspecialty": "Abdome",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0103",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Facomatoses - Parte 2",
+    "duration_min": 12,
+    "subspecialty": "Abdome",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0104",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "RM de Abdome Superior",
+    "duration_min": 29,
+    "subspecialty": "Abdome",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0105",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "LI-RADS",
+    "duration_min": 22,
+    "subspecialty": "Abdome",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0106",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Nódulos Hepáticos na TC e na RM",
+    "duration_min": 30,
+    "subspecialty": "Abdome",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0107",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Avaliação por Imagem do Trauma Abdominal",
+    "duration_min": 28,
+    "subspecialty": "Abdome",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0108",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "5 Casos Difíceis em Abdome Agudo",
+    "duration_min": 32,
+    "subspecialty": "Abdome",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0109",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Abdome Agudo Hemorrágico",
+    "duration_min": 35,
+    "subspecialty": "Abdome",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0110",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Abdome Agudo Vascular",
+    "duration_min": 27,
+    "subspecialty": "Abdome",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0111",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Endoleak",
+    "duration_min": 13,
+    "subspecialty": "Abdome",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_angio": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0112",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Critérios de Resposta Oncológica",
+    "duration_min": 11,
+    "subspecialty": "Abdome",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0113",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Síndromes Compressivas Abdominais",
+    "duration_min": 27,
+    "subspecialty": "Abdome",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0114",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "Como Avaliar uma RM de Próstata",
+    "duration_min": 40,
+    "subspecialty": "Abdome",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0115",
+    "module_name": "Medicina Interna - Abdome",
+    "lesson_theme": "PI-RADS: Classificação e Exemplos Práticos",
+    "duration_min": 36,
+    "subspecialty": "Abdome",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0116",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Primeiros passos na TC de tórax",
+    "duration_min": 15,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0
+    }
+  },
+  {
+    "id": "AUL-0117",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Vidro Fosco",
+    "duration_min": 22,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0118",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Sinais e Padrões Torácicos - Parte 1",
+    "duration_min": 0,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0119",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Sinais e Padrões Torácicos - Parte 2",
+    "duration_min": 12,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0120",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Linfonodos Mediastinais",
+    "duration_min": 16,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0
+    }
+  },
+  {
+    "id": "AUL-0121",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Diagnóstico diferencial do padrão micronodular",
+    "duration_min": 26,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0122",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "O Que Todo Radiologista Precisa Saber Sobre Coração Na TC de Tórax",
+    "duration_min": 34,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0123",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "TB x Micobacteriose Atípica",
+    "duration_min": 16,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0
+    }
+  },
+  {
+    "id": "AUL-0124",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Massas Mediastinais em Pediatria",
+    "duration_min": 19,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0
+    }
+  },
+  {
+    "id": "AUL-0125",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Patologias da Pleura",
+    "duration_min": 20,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0
+    }
+  },
+  {
+    "id": "AUL-0126",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Avaliação por Imagem do Trauma Torácico",
+    "duration_min": 42,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0
+    }
+  },
+  {
+    "id": "AUL-0127",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Bronquiectasias",
+    "duration_min": 28,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0128",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Mediastino",
+    "duration_min": 14,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0
+    }
+  },
+  {
+    "id": "AUL-0129",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Doenças Neoplásicas e Linfoproliferativas do Tórax",
+    "duration_min": 15,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0
+    }
+  },
+  {
+    "id": "AUL-0130",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Pneumonias intersticiais idiopáticas",
+    "duration_min": 21,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0
+    }
+  },
+  {
+    "id": "AUL-0131",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Embolias pulmonares não trombóticas",
+    "duration_min": 23,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0132",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "TEP Agudo x Crônico",
+    "duration_min": 31,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_angio": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0133",
+    "module_name": "Medicina Interna - Tórax",
+    "lesson_theme": "Tromboembolismo pulmonar: avaliando na prática",
+    "duration_min": 15,
+    "subspecialty": "Tórax e Mediastino",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_angio": 1.0,
+      "subespecialidade_torax": 1.0,
+      "subespecialidade_mediastino": 1.0
+    }
+  },
+  {
+    "id": "AUL-0134",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Níveis Linfonodais Cervicais",
+    "duration_min": 16,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_radiologia_geral": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0135",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Seios Paranasais | Avaliação pré-op - Parte 1",
+    "duration_min": 14,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0136",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Seios Paranasais | Avaliação pré-op - Parte 2",
+    "duration_min": 14,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0137",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Lesões Císticas Cervicais",
+    "duration_min": 22,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0138",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Paralisia de Prega Vocal",
+    "duration_min": 16,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0139",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Principais Patologias do Ouvido Médio",
+    "duration_min": 17,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0140",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Emergências Não-Traumáticas em Cabeça e Pescoço",
+    "duration_min": 28,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0141",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Avaliação dos Dentes: o que eu preciso saber?",
+    "duration_min": 30,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0142",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Anatomia da Faringe e Laringe",
+    "duration_min": 11,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0143",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Espaços Cervicais",
+    "duration_min": 34,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0144",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Anatomia da Órbita - Parte 1",
+    "duration_min": 24,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0145",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Anatomia da Órbita - Parte 2",
+    "duration_min": 21,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0146",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Tumores de Glândulas Salivares",
+    "duration_min": 20,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0147",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Articulações Temporomandibulares - Parte 1",
+    "duration_min": 31,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0148",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "Articulações Temporomandibulares - Parte 2",
+    "duration_min": 17,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0149",
+    "module_name": "Cabeça e Pescoço",
+    "lesson_theme": "ATM: Discussão de artigos",
+    "duration_min": 19,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0150",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Primeiros passos na TC de crânio",
+    "duration_min": 35,
+    "subspecialty": "Neurorradiologia",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0151",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Padrões de realce em neuroimagem",
+    "duration_min": 18,
+    "subspecialty": "Neurorradiologia",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0152",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Hemorragias intracranianas",
+    "duration_min": 39,
+    "subspecialty": "Neurorradiologia",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0153",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "AVC isquêmico na tomografia: como avaliar o ASPECTS?",
+    "duration_min": 20,
+    "subspecialty": "Neurorradiologia",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0154",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Como janelar a TC de crânio no AVC isquêmico?",
+    "duration_min": 11,
+    "subspecialty": "Neurorradiologia",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0155",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "4 casos básicos em TC de crânio",
+    "duration_min": 20,
+    "subspecialty": "Neurorradiologia",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0156",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Avaliação por imagem das demências",
+    "duration_min": 23,
+    "subspecialty": "Neurorradiologia",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0157",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Como eu Avalio uma RM do Crânio: O Guia Definitivo",
+    "duration_min": 32,
+    "subspecialty": "Neurorradiologia",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0158",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Linfoma do SNC",
+    "duration_min": 12,
+    "subspecialty": "Neurorradiologia",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0159",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Hidrocefalia de Pressão Normal",
+    "duration_min": 17,
+    "subspecialty": "Neurorradiologia",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0160",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Neuroinfecções - Parte 1",
+    "duration_min": 21,
+    "subspecialty": "Neurorradiologia",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0161",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Neuroinfecções - Parte 2",
+    "duration_min": 24,
+    "subspecialty": "Neurorradiologia",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0162",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Meningite e Abscesso Piogênico do SNC",
+    "duration_min": 33,
+    "subspecialty": "Neurorradiologia",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0163",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Espectroscopia de Prótons: Noções Básicas",
+    "duration_min": 32,
+    "subspecialty": "Neurorradiologia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0164",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Doenças Desmielinizantes",
+    "duration_min": 47,
+    "subspecialty": "Neurorradiologia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0165",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Doenças Toxicometabólicas",
+    "duration_min": 19,
+    "subspecialty": "Neurorradiologia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0166",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Anatomia dos Nervos Cranianos",
+    "duration_min": 40,
+    "subspecialty": "Neurorradiologia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0167",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Forames da Base do Crânio",
+    "duration_min": 17,
+    "subspecialty": "Neurorradiologia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0168",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Tumores de Fossa Posterior Pediátricos",
+    "duration_min": 18,
+    "subspecialty": "Neurorradiologia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0169",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Achados de Imagem das Herniações Cerebrais",
+    "duration_min": 47,
+    "subspecialty": "Neurorradiologia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0170",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Tumores Gliais do Adulto",
+    "duration_min": 18,
+    "subspecialty": "Neurorradiologia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0171",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Malformações em Neuropediatria - Parte 1",
+    "duration_min": 24,
+    "subspecialty": "Neurorradiologia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0172",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Malformações em Neuropediatria - Parte 2",
+    "duration_min": 27,
+    "subspecialty": "Neurorradiologia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0173",
+    "module_name": "Neurorradiologia",
+    "lesson_theme": "Cranioestenoses",
+    "duration_min": 33,
+    "subspecialty": "Neurorradiologia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0174",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Fraturas por Avulsão",
+    "duration_min": 28,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0175",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Alterações Degenerativa da Coluna Lombar",
+    "duration_min": 36,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0176",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Anatomia da mão e punho",
+    "duration_min": 25,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0177",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "USG MSK: Conceitos Gerais",
+    "duration_min": 26,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0178",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "USG MSK: Síndrome do tunel do carpo",
+    "duration_min": 29,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0179",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "USG MSK: ⁠⁠Síndrome do manguito rotador",
+    "duration_min": 35,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0180",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "USG MSK: ⁠⁠Tendões do cotovelo",
+    "duration_min": 27,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0181",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "USG MSK: Quadril Adulto",
+    "duration_min": 23,
+    "subspecialty": "Musculoesquelético",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0182",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Achados de Imagem das Doenças Metabólicas Ósseas",
+    "duration_min": 35,
+    "subspecialty": "Musculoesquelético",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0183",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "RM de ombro: avaliação básica",
+    "duration_min": 24,
+    "subspecialty": "Musculoesquelético",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0184",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "RM de joelho: avaliação básica",
+    "duration_min": 30,
+    "subspecialty": "Musculoesquelético",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0185",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "RM de quadril: avaliação básica",
+    "duration_min": 19,
+    "subspecialty": "Musculoesquelético",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0186",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Avaliação dos Mecanismos de Lesão do Joelho pela RM",
+    "duration_min": 28,
+    "subspecialty": "Musculoesquelético",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0187",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Artrite reumatoide e espondiloartrose",
+    "duration_min": 29,
+    "subspecialty": "Musculoesquelético",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0188",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Introdução às artropatias inflamatórias",
+    "duration_min": 28,
+    "subspecialty": "Musculoesquelético",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0189",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Neuropatia Radial e Ulnar",
+    "duration_min": 26,
+    "subspecialty": "Musculoesquelético",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0190",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Dedo em Gatilho",
+    "duration_min": 20,
+    "subspecialty": "Musculoesquelético",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0191",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Compartimentos Extensores do Punho",
+    "duration_min": 23,
+    "subspecialty": "Musculoesquelético",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0192",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Impacto femoroacetabular (PINCER x CAM)",
+    "duration_min": 31,
+    "subspecialty": "Musculoesquelético",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rx": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0193",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Manguito Rotador (Parte 1)",
+    "duration_min": 35,
+    "subspecialty": "Musculoesquelético",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0194",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Manguito Rotador (Parte 2)",
+    "duration_min": 24,
+    "subspecialty": "Musculoesquelético",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0195",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Classificação das Lesões Meniscais",
+    "duration_min": 30,
+    "subspecialty": "Musculoesquelético",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0196",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Hands-On: Menisco",
+    "duration_min": 19,
+    "subspecialty": "Musculoesquelético",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0197",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Ligamento Cruzado Anterior",
+    "duration_min": 47,
+    "subspecialty": "Musculoesquelético",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0198",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Instablidade Patelar - Parte 1",
+    "duration_min": 27,
+    "subspecialty": "Musculoesquelético",
+    "level": "27 min",
+    "metrics": {
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0199",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Instablidade Patelar - Parte 2",
+    "duration_min": 27,
+    "subspecialty": "Musculoesquelético",
+    "level": "27 min",
+    "metrics": {
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0200",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Principais Complexos Ligamentares do Tornozelo",
+    "duration_min": 18,
+    "subspecialty": "Musculoesquelético",
+    "level": "18 min",
+    "metrics": {
+      "exame_usg": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0201",
+    "module_name": "Musculoesquelético",
+    "lesson_theme": "Principais Tendinopatias do Tornozelo",
+    "duration_min": 19,
+    "subspecialty": "Musculoesquelético",
+    "level": "19 min",
+    "metrics": {
+      "exame_usg": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0202",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "Métodos de Imagem em Pediatria - Parte 1",
+    "duration_min": 40,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "subespecialidade_pediatria": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0203",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "Métodos de Imagem em Pediatria - Parte 2",
+    "duration_min": 30,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_pediatria": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0204",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "Hidronefrose",
+    "duration_min": 45,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_pediatria": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0205",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "Abdome Agudo Obstrutivo Neonatal",
+    "duration_min": 54,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_rx": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_pediatria": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0206",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "Malformações do Trato Urinário",
+    "duration_min": 30,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rx": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_pediatria": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0207",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "Malformações Pulmonares",
+    "duration_min": 38,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rx": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_pediatria": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0208",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "USG para Atresia de Vias Biliares",
+    "duration_min": 22,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_pediatria": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0209",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "Malformações do Trato Gastrointestinal",
+    "duration_min": 36,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_rx": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_pediatria": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0210",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "Estadiamento Oncológico: Neuroblastoma",
+    "duration_min": 31,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_pediatria": 1.0
+    }
+  },
+  {
+    "id": "AUL-0211",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "Estadiamento Oncológico: Tumor de Wilms",
+    "duration_min": 31,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_pediatria": 1.0
+    }
+  },
+  {
+    "id": "AUL-0212",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "Quadril Neonatal e Pediátrico",
+    "duration_min": 38,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_pediatria": 1.0
+    }
+  },
+  {
+    "id": "AUL-0213",
+    "module_name": "Radiologia Pediátrica",
+    "lesson_theme": "USG da Coluna Lombar Neonatal",
+    "duration_min": 22,
+    "subspecialty": "Radiologia Pediátrica",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_pediatria": 1.0
+    }
+  },
+  {
+    "id": "AUL-0214",
+    "module_name": "Mama",
+    "lesson_theme": "Anatomia Radiológica da Mama e Incidências Mamográficas",
+    "duration_min": 33,
+    "subspecialty": "Mama",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0215",
+    "module_name": "Mama",
+    "lesson_theme": "Anatomia Mamária no US e Como Documentar o US de Mamas e Axilas",
+    "duration_min": 22,
+    "subspecialty": "Mama",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0216",
+    "module_name": "Mama",
+    "lesson_theme": "Como Diminuir Erros na Interpretação Mamográfica",
+    "duration_min": 39,
+    "subspecialty": "Mama",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0
+    }
+  },
+  {
+    "id": "AUL-0217",
+    "module_name": "Mama",
+    "lesson_theme": "Ultrassom de Mamas: Como aperfeiçoar sua técnica e não perder achados importantes",
+    "duration_min": 35,
+    "subspecialty": "Mama",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0
+    }
+  },
+  {
+    "id": "AUL-0218",
+    "module_name": "Mama",
+    "lesson_theme": "5 Lesões não nodulares na ultrassonografia",
+    "duration_min": 37,
+    "subspecialty": "Mama",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0
+    }
+  },
+  {
+    "id": "AUL-0219",
+    "module_name": "Mama",
+    "lesson_theme": "Calcificações Mamárias",
+    "duration_min": 36,
+    "subspecialty": "Mama",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0
+    }
+  },
+  {
+    "id": "AUL-0220",
+    "module_name": "Mama",
+    "lesson_theme": "Léxico do BI-RADS (Parte 1)",
+    "duration_min": 26,
+    "subspecialty": "Mama",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0221",
+    "module_name": "Mama",
+    "lesson_theme": "Léxico do BI-RADS (Parte 2)",
+    "duration_min": 33,
+    "subspecialty": "Mama",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0222",
+    "module_name": "Mama",
+    "lesson_theme": "O que esperar do novo BI-RADS",
+    "duration_min": 26,
+    "subspecialty": "Mama",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0
+    }
+  },
+  {
+    "id": "AUL-0223",
+    "module_name": "Mama",
+    "lesson_theme": "Implantes Mamários",
+    "duration_min": 33,
+    "subspecialty": "Mama",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0
+    }
+  },
+  {
+    "id": "AUL-0224",
+    "module_name": "Mama",
+    "lesson_theme": "Rastreamento em Pacientes de Alto Risco",
+    "duration_min": 51,
+    "subspecialty": "Mama",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0
+    }
+  },
+  {
+    "id": "AUL-0225",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Como configurar o aparelho de USG",
+    "duration_min": 4,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0226",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Abdome Total",
+    "duration_min": 15,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0227",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Pelve Masculina",
+    "duration_min": 3,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0228",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Tireoide",
+    "duration_min": 3,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0229",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Região Cervical",
+    "duration_min": 5,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0230",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "FAST",
+    "duration_min": 6,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0231",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Tórax",
+    "duration_min": 4,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0232",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Mamas",
+    "duration_min": 5,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0233",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Pelve Feminina",
+    "duration_min": 2,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0234",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Transvaginal",
+    "duration_min": 5,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0235",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Bolsa Escrotal e Testículos",
+    "duration_min": 4,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0236",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Ombro",
+    "duration_min": 5,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0237",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Punho",
+    "duration_min": 5,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0238",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Joelho",
+    "duration_min": 6,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0239",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Tornozelo",
+    "duration_min": 8,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0240",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Parede Abdominal e Região Inguinal",
+    "duration_min": 7,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0241",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Doppler de carótidas",
+    "duration_min": 7,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0242",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Doppler arterial de membros superiores",
+    "duration_min": 7,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0243",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Doppler arterial de membros inferiores",
+    "duration_min": 11,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0244",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Doppler Hepático",
+    "duration_min": 31,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0245",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Doppler de Artéria Renal",
+    "duration_min": 5,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0246",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Apresentação sobre Biópsia",
+    "duration_min": 11,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0247",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "PAAF de Tireoide",
+    "duration_min": 12,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0248",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Biópsia de Mama",
+    "duration_min": 6,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante - Prática Cetrus",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0249",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "TI-RADS",
+    "duration_min": 20,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0250",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "USG Pediátrico na Emergência",
+    "duration_min": 23,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0251",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Emergências da Bolsa Escrotal e Peniana - Parte 1",
+    "duration_min": 18,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_tc": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0252",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Emergências da Bolsa Escrotal e Peniana - Parte 2",
+    "duration_min": 9,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_rm": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0253",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "FAST",
+    "duration_min": 6,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0254",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Ultrassonografia do Tórax",
+    "duration_min": 8,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0255",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Avaliação de Linfonodo Axilar por USG",
+    "duration_min": 15,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0256",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "USG de Abdome - Parte 1",
+    "duration_min": 38,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0257",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "USG de Abdome - Parte 2",
+    "duration_min": 55,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0258",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "USG de Cabeça e Pescoço",
+    "duration_min": 38,
+    "subspecialty": "Prática Cetrus",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0259",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "IOTA: Avaliação de Lesões Anexiais",
+    "duration_min": 15,
+    "subspecialty": "Prática Cetrus",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0260",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "O-RADS Ultrassonográfico",
+    "duration_min": 22,
+    "subspecialty": "Prática Cetrus",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0261",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Síndromes Compressivas",
+    "duration_min": 7,
+    "subspecialty": "Prática Cetrus",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0262",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Avaliação Ultrassonográfica do Diafragma",
+    "duration_min": 6,
+    "subspecialty": "Prática Cetrus",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0263",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "USG Transfontanela - Parte 1",
+    "duration_min": 16,
+    "subspecialty": "Prática Cetrus",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0264",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "USG Transfontanela - Parte 2",
+    "duration_min": 26,
+    "subspecialty": "Prática Cetrus",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 0.5,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0265",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Doppler de Carótidas e Vertebrais",
+    "duration_min": 41,
+    "subspecialty": "Prática Cetrus",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0266",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Doppler de Artérias Renais",
+    "duration_min": 30,
+    "subspecialty": "Prática Cetrus",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0267",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Doppler Hepático",
+    "duration_min": 31,
+    "subspecialty": "Prática Cetrus",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0268",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Doppler de Aorta",
+    "duration_min": 35,
+    "subspecialty": "Prática Cetrus",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0269",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Confecção de Fístula Arteriovenosa",
+    "duration_min": 27,
+    "subspecialty": "Prática Cetrus",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0270",
+    "module_name": "Ultrassom Cetrus",
+    "lesson_theme": "Avaliação de Fístula Arteriovenosa",
+    "duration_min": 4,
+    "subspecialty": "Prática Cetrus",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_pratica_cetrus": 1.0
+    }
+  },
+  {
+    "id": "AUL-0271",
+    "module_name": "Obstetrícia",
+    "lesson_theme": "Avaliação do Colo Uterino",
+    "duration_min": 22,
+    "subspecialty": "Gineco/Obstetrícia",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_gineco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0272",
+    "module_name": "Obstetrícia",
+    "lesson_theme": "Sonoembriologia Fetal",
+    "duration_min": 27,
+    "subspecialty": "Gineco/Obstetrícia",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_gineco": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0273",
+    "module_name": "Obstetrícia",
+    "lesson_theme": "Doppler Obstétrico e CIUR",
+    "duration_min": 65,
+    "subspecialty": "Gineco/Obstetrícia",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_gineco": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0274",
+    "module_name": "Obstetrícia",
+    "lesson_theme": "Gemelaridade - Parte 1",
+    "duration_min": 0,
+    "subspecialty": "Gineco/Obstetrícia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_gineco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0275",
+    "module_name": "Obstetrícia",
+    "lesson_theme": "Gemelaridade - Parte 2",
+    "duration_min": 28,
+    "subspecialty": "Gineco/Obstetrícia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_gineco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0276",
+    "module_name": "Obstetrícia",
+    "lesson_theme": "Morfológico de primeiro trimestre",
+    "duration_min": 31,
+    "subspecialty": "Gineco/Obstetrícia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_gineco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0277",
+    "module_name": "Obstetrícia",
+    "lesson_theme": "Morfológico de segundo trimestre",
+    "duration_min": 43,
+    "subspecialty": "Gineco/Obstetrícia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_gineco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0278",
+    "module_name": "Obstetrícia",
+    "lesson_theme": "MAV vs Restos Ovulares",
+    "duration_min": 19,
+    "subspecialty": "Gineco/Obstetrícia",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "exame_doppler": 1.0,
+      "subespecialidade_gineco": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0279",
+    "module_name": "Pelve Feminina",
+    "lesson_theme": "Anatomia, Técnica e Achados Fisiológicos",
+    "duration_min": 39,
+    "subspecialty": "Abdome - Pelve Feminina",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_gineco": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0280",
+    "module_name": "Pelve Feminina",
+    "lesson_theme": "Afecções Uterinas",
+    "duration_min": 41,
+    "subspecialty": "Abdome - Pelve Feminina",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_rm": 1.0,
+      "exame_hsg": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_gineco": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0281",
+    "module_name": "Pelve Feminina",
+    "lesson_theme": "Afecções Endometriais",
+    "duration_min": 39,
+    "subspecialty": "Abdome - Pelve Feminina",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_gineco": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0282",
+    "module_name": "Pelve Feminina",
+    "lesson_theme": "Colo Uterino",
+    "duration_min": 39,
+    "subspecialty": "Abdome - Pelve Feminina",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_gineco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0283",
+    "module_name": "Pelve Feminina",
+    "lesson_theme": "Afecções dos Ovários e Anexos",
+    "duration_min": 39,
+    "subspecialty": "Abdome - Pelve Feminina",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_gineco": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0284",
+    "module_name": "Pelve Feminina",
+    "lesson_theme": "Endometriose",
+    "duration_min": 39,
+    "subspecialty": "Abdome - Pelve Feminina",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_gineco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0285",
+    "module_name": "Pelve Feminina",
+    "lesson_theme": "Emergências Ginecológicas",
+    "duration_min": 39,
+    "subspecialty": "Abdome - Pelve Feminina",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_gineco": 1.0,
+      "coringa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0286",
+    "module_name": "Pelve Feminina",
+    "lesson_theme": "Histerossalpingografia",
+    "duration_min": 50,
+    "subspecialty": "Abdome - Pelve Feminina",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_hsg": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_gineco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0287",
+    "module_name": "Pelve Feminina",
+    "lesson_theme": "Puberdade Precoce",
+    "duration_min": 28,
+    "subspecialty": "Abdome - Pelve Feminina",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_rx": 1.0,
+      "exame_usg": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0,
+      "subespecialidade_gineco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0288",
+    "module_name": "Radiologia Intervencionista",
+    "lesson_theme": "Princípios Básicos de Biópsias Guiada por USG",
+    "duration_min": 25,
+    "subspecialty": "Intervenção",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_intervencao": 1.0
+    }
+  },
+  {
+    "id": "AUL-0289",
+    "module_name": "Radiologia Intervencionista",
+    "lesson_theme": "PAAF de Tireoide",
+    "duration_min": 13,
+    "subspecialty": "Intervenção",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_intervencao": 1.0
+    }
+  },
+  {
+    "id": "AUL-0290",
+    "module_name": "Radiologia Intervencionista",
+    "lesson_theme": "Princípios da Biópsia Guiada por TC",
+    "duration_min": 21,
+    "subspecialty": "Intervenção",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_intervencao": 1.0
+    }
+  },
+  {
+    "id": "AUL-0291",
+    "module_name": "Radiologia Intervencionista",
+    "lesson_theme": "Biópsia Hepática",
+    "duration_min": 12,
+    "subspecialty": "Intervenção",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_intervencao": 1.0
+    }
+  },
+  {
+    "id": "AUL-0292",
+    "module_name": "Radiologia Intervencionista",
+    "lesson_theme": "Biópsia de Mama",
+    "duration_min": 11,
+    "subspecialty": "Intervenção",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_mamografia": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_intervencao": 1.0
+    }
+  },
+  {
+    "id": "AUL-0293",
+    "module_name": "Radiologia Intervencionista",
+    "lesson_theme": "Biópsia de Pulmão",
+    "duration_min": 20,
+    "subspecialty": "Intervenção",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_intervencao": 1.0
+    }
+  },
+  {
+    "id": "AUL-0294",
+    "module_name": "Radiologia Intervencionista",
+    "lesson_theme": "Biópsia Renal",
+    "duration_min": 15,
+    "subspecialty": "Intervenção",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_intervencao": 1.0
+    }
+  },
+  {
+    "id": "AUL-0295",
+    "module_name": "Radiologia Intervencionista",
+    "lesson_theme": "Princípios Básicos de Técnicas Ablativas",
+    "duration_min": 23,
+    "subspecialty": "Intervenção",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_intervencao": 1.0
+    }
+  },
+  {
+    "id": "AUL-0296",
+    "module_name": "Radiologia Intervencionista",
+    "lesson_theme": "Biópsia de Próstata",
+    "duration_min": 13,
+    "subspecialty": "Intervenção",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "subespecialidade_intervencao": 1.0
+    }
+  },
+  {
+    "id": "AUL-0297",
+    "module_name": "Radiologia Intervencionista",
+    "lesson_theme": "Princípios Básicos da Drenagem de Coleções",
+    "duration_min": 16,
+    "subspecialty": "Intervenção",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_intervencao": 1.0
+    }
+  },
+  {
+    "id": "AUL-0298",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "Inteligência Artifical: Conceitos Básicos",
+    "duration_min": 33,
+    "subspecialty": "Inteligência Artificial",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "subespecialidade_inteligencia_artificial": 1.0
+    }
+  },
+  {
+    "id": "AUL-0299",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "Como criar um ótimo relatório?",
+    "duration_min": 23,
+    "subspecialty": "Premium",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_radiologia_geral": 1.0
+    }
+  },
+  {
+    "id": "AUL-0300",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "Meios de contraste x nefropatia: o que preciso saber?",
+    "duration_min": 20,
+    "subspecialty": "Premium",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "exame_radiologia_geral": 1.0
+    }
+  },
+  {
+    "id": "AUL-0301",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "Inteligência Artificial: ChatGPT & Produtividade na residência",
+    "duration_min": 33,
+    "subspecialty": "Inteligência Artificial",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "subespecialidade_inteligencia_artificial": 1.0
+    }
+  },
+  {
+    "id": "AUL-0302",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "Inteligência Artificial: Ética e Regulação",
+    "duration_min": 25,
+    "subspecialty": "Inteligência Artificial",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "subespecialidade_inteligencia_artificial": 1.0
+    }
+  },
+  {
+    "id": "AUL-0303",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "Inteligência Artificial: Tipos de Aprendizado & Análise de Performance",
+    "duration_min": 44,
+    "subspecialty": "Inteligência Artificial",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "subespecialidade_inteligencia_artificial": 1.0
+    }
+  },
+  {
+    "id": "AUL-0304",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "Montando a sua primeira workstation em casa",
+    "duration_min": 21,
+    "subspecialty": "Workstation",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "subespecialidade_workstation": 1.0
+    }
+  },
+  {
+    "id": "AUL-0305",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "Como se tornar Radiologista nos EUA? - Parte 1",
+    "duration_min": 10,
+    "subspecialty": "Premium",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "subespecialidade_ingles": 1.0
+    }
+  },
+  {
+    "id": "AUL-0306",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "Como se tornar Radiologista nos EUA? - Parte 2",
+    "duration_min": 6,
+    "subspecialty": "Premium",
+    "level": "Intermediário",
+    "metrics": {
+      "conteudo_intermediario": 1.0,
+      "subespecialidade_ingles": 1.0
+    }
+  },
+  {
+    "id": "AUL-0307",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "PET DOTA",
+    "duration_min": 13,
+    "subspecialty": "Premium",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_petct": 1.0
+    }
+  },
+  {
+    "id": "AUL-0308",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "PET FDG: Introdução",
+    "duration_min": 14,
+    "subspecialty": "Premium",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_petct": 1.0
+    }
+  },
+  {
+    "id": "AUL-0309",
+    "module_name": "Aulas Premium",
+    "lesson_theme": "PET FDG: Fisiológico x Patológico",
+    "duration_min": 14,
+    "subspecialty": "Premium",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "exame_petct": 1.0
+    }
+  },
+  {
+    "id": "AUL-0310",
+    "module_name": "Inglês Médico",
+    "lesson_theme": "Medical Terminology",
+    "duration_min": 46,
+    "subspecialty": "Inglês",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_ingles": 1.0
+    }
+  },
+  {
+    "id": "AUL-0311",
+    "module_name": "Inglês Médico",
+    "lesson_theme": "Image Exams",
+    "duration_min": 50,
+    "subspecialty": "Inglês",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_ingles": 1.0
+    }
+  },
+  {
+    "id": "AUL-0312",
+    "module_name": "Inglês Médico",
+    "lesson_theme": "Respiratory System",
+    "duration_min": 31,
+    "subspecialty": "Inglês",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_ingles": 1.0
+    }
+  },
+  {
+    "id": "AUL-0313",
+    "module_name": "Inglês Médico",
+    "lesson_theme": "Digestive System",
+    "duration_min": 33,
+    "subspecialty": "Inglês",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_ingles": 1.0
+    }
+  },
+  {
+    "id": "AUL-0314",
+    "module_name": "Inglês Médico",
+    "lesson_theme": "Cardiovascular System",
+    "duration_min": 43,
+    "subspecialty": "Inglês",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_ingles": 1.0
+    }
+  },
+  {
+    "id": "AUL-0315",
+    "module_name": "Finanças para Médicos",
+    "lesson_theme": "Noções Básicas de Economia",
+    "duration_min": 38,
+    "subspecialty": "Finanças",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_financas": 1.0
+    }
+  },
+  {
+    "id": "AUL-0316",
+    "module_name": "Finanças para Médicos",
+    "lesson_theme": "Renda Fixa",
+    "duration_min": 32,
+    "subspecialty": "Finanças",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_financas": 1.0
+    }
+  },
+  {
+    "id": "AUL-0317",
+    "module_name": "Finanças para Médicos",
+    "lesson_theme": "Renda Variável - Ações",
+    "duration_min": 38,
+    "subspecialty": "Finanças",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_financas": 1.0
+    }
+  },
+  {
+    "id": "AUL-0318",
+    "module_name": "Finanças para Médicos",
+    "lesson_theme": "Fundos de Investimentos",
+    "duration_min": 42,
+    "subspecialty": "Finanças",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_financas": 1.0
+    }
+  },
+  {
+    "id": "AUL-0319",
+    "module_name": "Finanças para Médicos",
+    "lesson_theme": "Fundos Imobiliários",
+    "duration_min": 45,
+    "subspecialty": "Finanças",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_financas": 1.0
+    }
+  },
+  {
+    "id": "AUL-0320",
+    "module_name": "Finanças para Médicos",
+    "lesson_theme": "Previdência Privada",
+    "duration_min": 24,
+    "subspecialty": "Finanças",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_financas": 1.0
+    }
+  },
+  {
+    "id": "AUL-0321",
+    "module_name": "Finanças para Médicos",
+    "lesson_theme": "EUA e Criptomoedas",
+    "duration_min": 38,
+    "subspecialty": "Finanças",
+    "level": "Avançado",
+    "metrics": {
+      "conteudo_avancado": 1.0,
+      "subespecialidade_financas": 1.0
+    }
+  },
+  {
+    "id": "AUL-0322",
+    "module_name": "Assessoria Científica",
+    "lesson_theme": "Apresentação: O que é a Assessoria Científica",
+    "duration_min": 7,
+    "subspecialty": "Assessoria Científica",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "subespecialidade_pesquisa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0323",
+    "module_name": "Assessoria Científica",
+    "lesson_theme": "O que é ensaio pictórico?",
+    "duration_min": 5,
+    "subspecialty": "Assessoria Científica",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "subespecialidade_pesquisa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0324",
+    "module_name": "Assessoria Científica",
+    "lesson_theme": "Onde Publicar?",
+    "duration_min": 3,
+    "subspecialty": "Assessoria Científica",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "subespecialidade_pesquisa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0325",
+    "module_name": "Assessoria Científica",
+    "lesson_theme": "Por que Publicar?",
+    "duration_min": 4,
+    "subspecialty": "Assessoria Científica",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "subespecialidade_pesquisa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0326",
+    "module_name": "Assessoria Científica",
+    "lesson_theme": "Por onde começar?",
+    "duration_min": 7,
+    "subspecialty": "Assessoria Científica",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "subespecialidade_pesquisa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0327",
+    "module_name": "Assessoria Científica",
+    "lesson_theme": "5 dias para melhorar o seu trabalho",
+    "duration_min": 5,
+    "subspecialty": "Assessoria Científica",
+    "level": "Iniciante",
+    "metrics": {
+      "fundamentos_basicos": 1.0,
+      "subespecialidade_pesquisa": 1.0
+    }
+  },
+  {
+    "id": "AUL-0328",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Doença Celíaca",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0329",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Baço acessório intrapancreático",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0330",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Hérnia Obturatória",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0331",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Cistoadenoma Seroso do Pâncreas",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0332",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Síndrome de Prune-Belly",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0333",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Adenomas Hepáticos",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0334",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Aneurisma de Aorta Abdominal Roto",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_angio": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0335",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Apendagite Epiploica",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0336",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Carcinoma de Células Renais Subtipo Papilífero",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0337",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Colite Estercoral",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0338",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Doença Renal Policística Autossômica Dominante",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0339",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "GIST retal",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0340",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Hiperplasia Nodular Focal",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0341",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Ileíte Terminal",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0342",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Mielolipoma Adrenal",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0343",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Perfuração Intestinal por Espinha de Peixe",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0344",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Semioclusão intestinal por doença de Crohn",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0345",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Síndrome da Artéria Mesentérica Superior",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0346",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Síndrome do Ligamento Arqueado Mediano",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0347",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Síndrome de Ogilvie",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0348",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Torção Anexial",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0349",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Tumor de Krukenberg",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0350",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Walled-Off Necrosis",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0351",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Apendicite com má rotação intestinal",
+    "duration_min": 5,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0352",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Volvo Cecal",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0353",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Síndrome de Wunderlich",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0354",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Fasciolose Hepática",
+    "duration_min": 6,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0355",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Síndrome de Nutcracker",
+    "duration_min": 1,
+    "subspecialty": "Abdome",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0356",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Sequestro Pulmonar",
+    "duration_min": 1,
+    "subspecialty": "Tórax",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0357",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Ocronose",
+    "duration_min": 4,
+    "subspecialty": "Tórax",
+    "level": "",
+    "metrics": {
+      "exame_rx": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0358",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Ossificação Pulmonar Dendriforme",
+    "duration_min": 1,
+    "subspecialty": "Tórax",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0359",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Hipertrofia Lipomatosa do Septo Interatrial",
+    "duration_min": 1,
+    "subspecialty": "Tórax",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0360",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Nódulos Reumatoides",
+    "duration_min": 1,
+    "subspecialty": "Tórax",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0361",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Situs Inversus Totalis",
+    "duration_min": 1,
+    "subspecialty": "Tórax",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0362",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Teratoma Mediastinal Roto",
+    "duration_min": 1,
+    "subspecialty": "Tórax",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0363",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Bronquiolite de padrão miliar",
+    "duration_min": 1,
+    "subspecialty": "Tórax",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0364",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Traqueobroncopatia Osteocondroplásica",
+    "duration_min": 3,
+    "subspecialty": "Tórax",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0365",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Cisto Aracnoide",
+    "duration_min": 1,
+    "subspecialty": "Neurorradiologia",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0366",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Oligodendroglioma",
+    "duration_min": 1,
+    "subspecialty": "Neurorradiologia",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0367",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Cisto Neuroglial",
+    "duration_min": 1,
+    "subspecialty": "Neurorradiologia",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0368",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Malformações cavernosas cerebrais...",
+    "duration_min": 1,
+    "subspecialty": "Neurorradiologia",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0369",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Depósito de Manganês",
+    "duration_min": 1,
+    "subspecialty": "Neurorradiologia",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0370",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Paralisia de Corda Vocal",
+    "duration_min": 1,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0371",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Disfagia Induzida por Osteófitos",
+    "duration_min": 1,
+    "subspecialty": "Cabeça e Pescoço",
+    "level": "",
+    "metrics": {
+      "exame_tc": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0372",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Tendinopatia Calcárea do Supraespinhal",
+    "duration_min": 1,
+    "subspecialty": "Ultrassonografia",
+    "level": "",
+    "metrics": {
+      "exame_usg": 1.0
+    }
+  },
+  {
+    "id": "AUL-0373",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Condroblastoma",
+    "duration_min": 1,
+    "subspecialty": "Musculoesquelético",
+    "level": "",
+    "metrics": {
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0374",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Fraturas patológicas",
+    "duration_min": 1,
+    "subspecialty": "Musculoesquelético",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0375",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Abscesso de Brodie",
+    "duration_min": 1,
+    "subspecialty": "Musculoesquelético",
+    "level": "",
+    "metrics": {
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0376",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Osteomielite crônica",
+    "duration_min": 1,
+    "subspecialty": "Musculoesquelético",
+    "level": "",
+    "metrics": {
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0377",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Tríade de Haglund",
+    "duration_min": 1,
+    "subspecialty": "Musculoesquelético",
+    "level": "",
+    "metrics": {
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0378",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Coalizão talonavicular",
+    "duration_min": 1,
+    "subspecialty": "Musculoesquelético",
+    "level": "",
+    "metrics": {
+      "exame_rx": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0379",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Tendinopatia calcárea com migração bursal",
+    "duration_min": 2,
+    "subspecialty": "Musculoesquelético",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0380",
+    "module_name": "Pílulas de Conhecimento",
+    "lesson_theme": "Rotura completa do supraespinhal",
+    "duration_min": 6,
+    "subspecialty": "Musculoesquelético",
+    "level": "",
+    "metrics": {
+      "exame_rm": 1.0,
+      "subespecialidade_musculoesqueletico": 1.0
+    }
+  },
+  {
+    "id": "AUL-0381",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Discussão de casos em mamografia",
+    "duration_min": 39,
+    "subspecialty": "Discussões / Mama",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_mamografia": 1.0,
+      "subespecialidade_mama": 1.0
+    }
+  },
+  {
+    "id": "AUL-0382",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Discussão de casos: adrenal",
+    "duration_min": 51,
+    "subspecialty": "Discussões / Abdome",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0383",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Discussão de casos: câncer renal",
+    "duration_min": 52,
+    "subspecialty": "Discussões / Abdome",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0384",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Discussão de casos: Ossos Temporais",
+    "duration_min": 49,
+    "subspecialty": "Discussões / Cabeça e Pescoço",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_cabeca_pescoco": 1.0
+    }
+  },
+  {
+    "id": "AUL-0385",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Discussão de casos: abdome agudo no pronto-socorro",
+    "duration_min": 16,
+    "subspecialty": "Discussões / Abdome",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0386",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Discussão de casos: lesões císticas pancreáticas",
+    "duration_min": 52,
+    "subspecialty": "Discussões / Abdome",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0387",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Discussão de casos: Lesões císticas renais (Bosniak)",
+    "duration_min": 38,
+    "subspecialty": "Discussões / Abdome",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0388",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Discussão de casos: Lesões Hepáticas Focais",
+    "duration_min": 49,
+    "subspecialty": "Discussões / Abdome",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_usg": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0389",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Discussão de casos LIRADS",
+    "duration_min": 61,
+    "subspecialty": "Discussões / Abdome",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0390",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Discussão de casos: cólon",
+    "duration_min": 29,
+    "subspecialty": "Discussões / Abdome",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_abdome": 1.0
+    }
+  },
+  {
+    "id": "AUL-0391",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Tromboembolismo Pulmonar",
+    "duration_min": 21,
+    "subspecialty": "Discussões / Tórax",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_angio": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0392",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Bronquiectasias",
+    "duration_min": 42,
+    "subspecialty": "Discussões / Tórax",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_rx": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0393",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "PIU x PINE",
+    "duration_min": 31,
+    "subspecialty": "Discussões / Tórax",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0394",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Doenças Císticas Pulmonares",
+    "duration_min": 26,
+    "subspecialty": "Discussões / Tórax",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0395",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Nódulos Pulmonares",
+    "duration_min": 29,
+    "subspecialty": "Discussões / Tórax",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0396",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Doenças Infecciosas do Tórax",
+    "duration_min": 37,
+    "subspecialty": "Discussões / Tórax",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  },
+  {
+    "id": "AUL-0397",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Traumatismo cranioencefálico",
+    "duration_min": 17,
+    "subspecialty": "Discussões / Neuro",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0398",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Doenças Desmielinizantes e Neuroinfecções",
+    "duration_min": 47,
+    "subspecialty": "Discussões / Neuro",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0399",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Hemorragias intracranianas",
+    "duration_min": 40,
+    "subspecialty": "Discussões / Neuro",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0400",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "AVCi e seus diagnósticos diferenciais",
+    "duration_min": 39,
+    "subspecialty": "Discussões / Neuro",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0401",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Tumores do SNC",
+    "duration_min": 49,
+    "subspecialty": "Discussões / Neuro",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0402",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Casos clínicos em neurologia",
+    "duration_min": 33,
+    "subspecialty": "Discussões / Neuro",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "exame_rm": 1.0,
+      "subespecialidade_neuro": 1.0
+    }
+  },
+  {
+    "id": "AUL-0403",
+    "module_name": "Discussões ao VIVO",
+    "lesson_theme": "Síndromes Dispneicas agudas no PS",
+    "duration_min": 30,
+    "subspecialty": "Discussões / Tórax",
+    "level": "",
+    "metrics": {
+      "discussoes_ao_vivo": 1.0,
+      "exame_tc": 1.0,
+      "subespecialidade_torax": 1.0
+    }
+  }
+]

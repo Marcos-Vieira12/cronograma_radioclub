@@ -1,0 +1,90 @@
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Estilos aplicados a todos os elementos <form> */
+form {
+  width: 70%;
+  margin: 40px auto;        /* centraliza na tela */
+  padding: 24px 32px;       /* espaçamento interno */
+  border-radius: 16px;      /* bordas arredondadas */
+  box-shadow: 0 4px 200px rgba(0, 0, 0, 0.479); /* leve sombra */
+  display: flex;
+  flex-direction: column;   /* empilha os itens verticalmente */
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  form {
+    padding: 16px 20px;
+    border-radius: 12px;
+  }
+}
+
+/* Opcional — estilo para inputs e botões dentro do form */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #4a90e2;
+}
+
+form button {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+form button:hover {
+  background-color: #357ab8;
+}
+
+.checkbox-option {
+  margin-bottom: 6px; /* espaço entre as opções */
+}
+
+.checkbox-label {
+  display: inline-flex; /* mantém caixa + texto na mesma linha */
+  align-items: center;
+  gap: 8px; /* espaço entre eles */
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin: 0; /* remove margens automáticas */
+  width: auto;
+}
