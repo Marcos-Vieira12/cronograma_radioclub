@@ -11,7 +11,7 @@ def atualizar_metricas(respostas_aluno, metricas):
                 metricas["exame_rx"] += 4
             elif exame == "USG":
                 metricas["exame_usg"] += 4
-            elif exame == "Densitometria Óssea":
+            elif exame == "Densitometria":
                 metricas["exame_densitometria"] += 2
             elif exame == "Mamografia":
                 metricas["exame_mamografia"] += 2
@@ -29,7 +29,7 @@ def atualizar_metricas(respostas_aluno, metricas):
                 metricas["exame_contrastados"] += 2
 
     # Subespecialidades (fechada)
-    q_subs = "Quais subespecialidades você tem mais contato na Residência?"
+    q_subs = "Quais subespecialidades você mais tem contato na Residência?"
     if q_subs in r:
         for subesp in r[q_subs]:
             if subesp == "Neuro":

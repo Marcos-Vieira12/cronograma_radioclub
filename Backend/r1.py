@@ -52,10 +52,10 @@ def atualizar_metricas(respostas_aluno, metricas):
             metricas
         )
 
-    if "Quais temas você está vendo ou vai ver no primeiro ano de Residência?" in r:
+    if "Quais temas você está vendo ou vai ver no primeiro ano de Residência? (ex: Pneumonia, AVC, Aneurisma, Abdome Agudo, Fraturas, física...)" in r:
         metricas = processar_resposta_aberta(
             "Quais temas você está vendo ou vai ver no primeiro ano de Residência?",
-            r["Quais temas você está vendo ou vai ver no primeiro ano de Residência?"],
+            r["Quais temas você está vendo ou vai ver no primeiro ano de Residência? (ex: Pneumonia, AVC, Aneurisma, Abdome Agudo, Fraturas, física...)"],
             metricas
         )
 

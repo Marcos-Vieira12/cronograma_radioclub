@@ -3,4 +3,5 @@ uvicorn[standard]>=0.30
 reportlab>=4.2
 openai>=1.0.0
 python-dotenv>=1.0.1
-gunicorn
+PyPDF2>=3.0.0
+

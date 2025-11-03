@@ -12,9 +12,11 @@ def configurar_metricas_comuns(metricas: Dict[str, float], respostas_aluno: Dict
     nivel = respostas_aluno.get("nivel")
 
     num_semanas = r.get("numero_semanas")
+
     if isinstance(num_semanas, (int, float)) and num_semanas > 0:
         metricas["semanas"] = int(num_semanas)
-
+    else:
+        metricas["semanas"] = 12
     # Peso base por nível
     if nivel == "R1":
         metricas["fundamentos_basicos"] += 2.0
@@ -34,7 +36,7 @@ def configurar_metricas_comuns(metricas: Dict[str, float], respostas_aluno: Dict
         metricas["conteudo_avancado"] += 2.0
 
     # Objetivos (comum a todos os níveis)
-    objetivos = _to_list(r.get("Quais os seus objetivos com o curso RadioClub?"))
+    objetivos = _to_list(r.get("Quais seus objetivos com o Curso Radioclub?"))
 
     if "Aprofundar conhecimentos na minha subespecialidade atual" in objetivos:
         metricas["foco_subespecialidade"] += 0.5
@@ -49,13 +51,13 @@ def configurar_metricas_comuns(metricas: Dict[str, float], respostas_aluno: Dict
         if tempo == "Até 1h":
             metricas["carga_horaria_min"] = 30
             metricas["carga_horaria_max"] = 60
-        elif tempo == "1h a 2h":
+        elif tempo == "Entre 1h e 2h":
             metricas["carga_horaria_min"] = 60
             metricas["carga_horaria_max"] = 120
-        elif tempo == "2h a 3h":
+        elif tempo == "Entre 2h e 3h":
             metricas["carga_horaria_min"] = 120
             metricas["carga_horaria_max"] = 180
-        elif tempo == "3h a 4h":
+        elif tempo == "Entre 3h e 4h":
             metricas["carga_horaria_min"] = 180
             metricas["carga_horaria_max"] = 240
         elif tempo == "Mais de 4h":
@@ -63,7 +65,7 @@ def configurar_metricas_comuns(metricas: Dict[str, float], respostas_aluno: Dict
             metricas["carga_horaria_max"] = 360
 
     # Temas extras
-    temas_extras = _to_list(r.get("temas_extras"))
+    temas_extras = _to_list(r.get("Além do conteúdo técnico, você se interessa por alguns desses outros temas?"))
     if "Inglês médico" in temas_extras:
         metricas["subespecialidade_ingles"] += 4
     if "Como montar sua workstation" in temas_extras:

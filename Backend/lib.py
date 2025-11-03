@@ -4,8 +4,13 @@ from typing import Any, Dict, List
 from reportlab.lib.pagesizes import A4  # type: ignore
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, PageBreak  # type: ignore
 from reportlab.lib import colors  # type: ignore
-from reportlab.lib.styles import getSampleStyleSheet  # type: ignore
+from reportlab.lib.enums import TA_CENTER
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle  # type: ignore
+from reportlab.lib.utils import ImageReader
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from io import BytesIO
+from PyPDF2 import PdfReader, PdfWriter
 from pathlib import Path
 
 # ==== Imports do teu projeto ====
@@ -18,7 +23,23 @@ from r4 import atualizar_metricas as atualizar_metricas_r4
 
 # Base do projeto (lib.py está na raiz neste layout)
 BASE_DIR = Path(__file__).resolve().parent
-JSON_PATH = BASE_DIR / "json" / "catalogo.json"
+JSON_PATH = BASE_DIR / "files" / "catalogo.json"
+CAPA_PATH = BASE_DIR / "files" / "capa.pdf"
+CONTRACAPA_PATH = BASE_DIR / "files" / "contracapa.pdf"
+SLOGAN_PATH = BASE_DIR / "files" / "slogan.png"
+# --- Paleta (HEX -> ReportLab) ---
+AZUL = colors.HexColor("#2f53ea")
+CINZA = colors.HexColor("#d9d9d9")
+CINZA_CLARO = colors.HexColor("#f4f4f4")
+PRETO = colors.black
+BRANCO = colors.white
+# --- Registrar fontes Montserrat (Regular/Bold) ---
+pdfmetrics.registerFont(TTFont("Montserrat", str(BASE_DIR / "fonts" / "Montserrat-Regular.ttf")))
+pdfmetrics.registerFont(TTFont("Montserrat-Bold", str(BASE_DIR / "fonts" / "Montserrat-Bold.ttf")))
+FONT_REG = "Montserrat"
+FONT_BOLD = "Montserrat-Bold"
+
+
 
 # -------------------- Utilitários --------------------
 def carregar_catalogo(path: Path = JSON_PATH):
@@ -109,33 +130,200 @@ def gerar_cronograma(
     return cronograma
 
 def gerar_pdf_bytes(cronograma: List[List[Dict[str, Any]]]) -> BytesIO:
-    buf = BytesIO()
-    doc = SimpleDocTemplate(buf, pagesize=A4)
+    miolo_buf = BytesIO()
+
+    # Margens e página
+    LATERAL = 12
+    RODAPE = 20
+
+    # --- Slogan controlado por largura (percentual da área útil) ---
+    WIDTH_RATIO = 0.45  # 45% da largura útil
+    try:
+        img = ImageReader(str(SLOGAN_PATH))
+        iw, ih = img.getSize()
+    except Exception:
+        iw, ih = (1, 1)
+
+    avail_w_page = A4[0] - 2 * LATERAL
+    w = WIDTH_RATIO * avail_w_page
+    h = w * (ih / iw)  # altura proporcional
+
+    # Espaçamentos proporcionais ao h efetivo
+    space_above = 0.80 * h
+    space_below = 1.5 * h
+    TOP_MARGIN = int(round(space_above + h + space_below))
+
+    doc = SimpleDocTemplate(
+        miolo_buf, pagesize=A4,
+        leftMargin=LATERAL, rightMargin=LATERAL,
+        topMargin=TOP_MARGIN, bottomMargin=RODAPE
+    )
+
     styles = getSampleStyleSheet()
+    body_size = styles["Normal"].fontSize + 1
+    body_leading = body_size + 2
+    styles["Normal"].fontName = FONT_REG
+    styles["Normal"].fontSize = body_size
+    styles["Normal"].leading = body_leading
+
+    tema_style = ParagraphStyle(
+        "tema", parent=styles["Normal"],
+        fontName=FONT_REG,
+        fontSize=body_size, leading=body_leading
+    )
+
+    # desenha o slogan usando o mesmo WIDTH_RATIO
+    def on_page(canvas, doc_):
+        try:
+            img = ImageReader(str(SLOGAN_PATH))
+            iw, ih = img.getSize()
+
+            avail_w = doc_.pagesize[0] - doc_.leftMargin - doc_.rightMargin
+            _w = WIDTH_RATIO * avail_w
+            _h = _w * (ih / iw)
+
+            _space_above = 0.9 * _h
+            x = doc_.leftMargin + (avail_w - _w) / 2.0
+            y = doc_.pagesize[1] - (_space_above + _h)
+
+            canvas.drawImage(
+                img, x, y, width=_w, height=_h,
+                preserveAspectRatio=True, mask='auto'
+            )
+        except Exception:
+            pass
+
     elementos = []
 
     for i, semana in enumerate(cronograma, 1):
-        elementos.append(Paragraph(f"Semana {i}", styles["Heading2"]))
-        data = [["#", "Módulo", "Tema", "Minutos"]]
+        data = []
+        # 1) Faixa SEMANA X
+        data.append([f"SEMANA {i}", "", ""])
+        # 2) Cabeçalho (fundo branco, negrito, centralizado)
+        data.append(["MÓDULO", "TEMA", "MINUTOS DE AULA"])
+
         total_semana = 0
-        for idx, aula in enumerate(semana, 1):
-            data.append([idx, aula["module_name"], aula["lesson_theme"], aula["duration_min"]])
+        # 3) Aulas
+        for aula in semana:
             total_semana += aula["duration_min"]
+            data.append([
+                Paragraph(aula["module_name"], styles["Normal"]),
+                Paragraph(aula["lesson_theme"], tema_style),
+                str(aula["duration_min"]),  # string para ALIGN funcionar
+            ])
 
-        tabela = Table(data, repeatRows=1)
-        tabela.setStyle(TableStyle([
-            ("BACKGROUND", (0, 0), (-1, 0), colors.grey),
-            ("TEXTCOLOR", (0, 0), (-1, 0), colors.whitesmoke),
-            ("ALIGN", (0, 0), (-1, -1), "LEFT"),
-            ("GRID", (0, 0), (-1, -1), 0.5, colors.black),
-        ]))
+        # 4) Linha TOTAL (apenas na 3ª coluna)
+        horas = total_semana // 60
+        mins = total_semana % 60
+        total_txt = f"TOTAL: ({horas}H{mins:02d})"
+        data.append(["", "", total_txt])
+
+        # Larguras (Módulo↑, Minutos↑, Tema↓)
+        total_w = doc.pagesize[0] - doc.leftMargin - doc.rightMargin
+        cw_mod = 0.32 * total_w
+        cw_tema = 0.48 * total_w
+        cw_min = 0.20 * total_w
+
+        # Alturas das linhas
+        content_h = 36
+        total_h = max(18, int(round(content_h * 0.6)))
+        row_heights = []
+        for r in range(len(data)):
+            if r == 0:              row_heights.append(22)       # faixa
+            elif r == 1:            row_heights.append(22)       # cabeçalho
+            elif r == len(data)-1:  row_heights.append(total_h)  # total 60%
+            else:                   row_heights.append(content_h) # conteúdo
+
+        tabela = Table(
+            data,
+            repeatRows=2,
+            colWidths=[cw_mod, cw_tema, cw_min],
+            rowHeights=row_heights
+        )
+
+        ts = TableStyle([
+            # GRID geral cinza e mais espesso
+            ("GRID", (0, 0), (-1, -1), 1.0, CINZA),
+
+            # Faixa SEMANA X (col 0 azul; col 1..2 cinza com SPAN)
+            ("BACKGROUND", (0, 0), (0, 0), AZUL),
+            ("TEXTCOLOR", (0, 0), (0, 0), BRANCO),
+            ("FONTNAME", (0, 0), (0, 0), FONT_BOLD),
+            ("FONTSIZE", (0, 0), (0, 0), body_size + 2),
+            ("ALIGN", (0, 0), (0, 0), "CENTER"),  # CENTRALIZA SEMANA X
+            ("VALIGN", (0, 0), (0, 0), "MIDDLE"),
+
+            ("BACKGROUND", (1, 0), (2, 0), CINZA),
+            ("LINEBEFORE", (2, 0), (2, 0), 0, BRANCO),
+            ("LINEAFTER", (1, 0), (1, 0), 0, BRANCO),
+            ("SPAN", (1, 0), (2, 0)),
+
+            # Borda azul ao redor da célula "SEMANA X"
+            ("BOX", (0, 0), (0, 0), 1.0, AZUL),
+
+            # Cabeçalho centralizado (fundo branco)
+            ("BACKGROUND", (0, 1), (-1, 1), BRANCO),
+            ("TEXTCOLOR", (0, 1), (-1, 1), PRETO),
+            ("FONTNAME", (0, 1), (-1, 1), FONT_BOLD),
+            ("FONTSIZE", (0, 1), (-1, 1), body_size),
+            ("ALIGN", (0, 1), (-1, 1), "CENTER"),
+            ("VALIGN", (0, 1), (-1, 1), "MIDDLE"),
+
+            # Corpo: módulo/tema à esquerda-baixo; minutos centralizado
+            ("VALIGN", (0, 2), (-1, -2), "BOTTOM"),
+            ("ALIGN", (0, 2), (1, -2), "LEFT"),
+            ("ALIGN", (2, 2), (2, -2), "CENTER"),
+            ("VALIGN", (2, 2), (2, -2), "MIDDLE"),
+
+            # Padding menor
+            ("LEFTPADDING", (0, 0), (-1, -1), 4),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 4),
+            ("TOPPADDING", (0, 0), (-1, -1), 4),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
+
+            # Linha TOTAL: col 0..1 cinza; col 2 azul/ branco/ bold/ centralizado
+            ("BACKGROUND", (0, -1), (1, -1), CINZA),
+            ("BACKGROUND", (2, -1), (2, -1), AZUL),
+            ("TEXTCOLOR", (2, -1), (2, -1), BRANCO),
+            ("FONTNAME", (2, -1), (2, -1), FONT_BOLD),
+            ("FONTSIZE", (2, -1), (2, -1), body_size),
+            ("ALIGN", (2, -1), (2, -1), "CENTER"),
+            ("VALIGN", (2, -1), (2, -1), "MIDDLE"),
+
+            # Borda azul ao redor da célula "TOTAL"
+            ("BOX", (2, -1), (2, -1), 1.0, AZUL),
+        ])
+        tabela.setStyle(ts)
+
         elementos.append(tabela)
-        elementos.append(Spacer(1, 24))
-        elementos.append(Paragraph(f"Tempo total da semana: {total_semana} minutos", styles["Normal"]))
-
         if i < len(cronograma):
             elementos.append(PageBreak())
 
-    doc.build(elementos)
-    buf.seek(0)
-    return buf
+    doc.build(elementos, onFirstPage=on_page, onLaterPages=on_page)
+    miolo_buf.seek(0)
+
+    # Junta CAPA + MIOLO + CONTRACAPA (usa *PATH já definidos no módulo)
+    writer = PdfWriter()
+    try:
+        r = PdfReader(open(CAPA_PATH, "rb"))
+        for p in r.pages:
+            writer.add_page(p)
+    except Exception:
+        pass
+
+    r = PdfReader(miolo_buf)
+    for p in r.pages:
+        writer.add_page(p)
+
+    try:
+        r = PdfReader(open(CONTRACAPA_PATH, "rb"))
+        for p in r.pages:
+            writer.add_page(p)
+    except Exception:
+        pass
+
+    out = BytesIO()
+    writer.write(out)
+    out.seek(0)
+    return out
+

@@ -7,11 +7,11 @@ def atualizar_metricas(respostas_aluno, metricas):
     q_exames = "Quais exames você realiza na sua prática atual e gostaria de revisar ou de se atualizar?"
     if q_exames in r:
         for exame in r[q_exames]:
-            if exame == "RX Geral":
+            if exame == "RX":
                 metricas["exame_rx"] += 4
-            elif exame == "USG Geral":
+            elif exame == "USG":
                 metricas["exame_usg"] += 4
-            elif exame == "Densitometria Óssea":
+            elif exame == "Densitometria":
                 metricas["exame_densitometria"] += 2
             elif exame == "Mamografia":
                 metricas["exame_mamografia"] += 2
@@ -21,7 +21,7 @@ def atualizar_metricas(respostas_aluno, metricas):
                 metricas["exame_rm"] += 2
             elif exame == "Doppler":
                 metricas["exame_doppler"] += 2
-            elif exame == "AngioTC / AngioRM":
+            elif exame == "AngioTC e AngioRM":
                 metricas["exame_angio"] += 2
             elif exame == "Fluoroscopia":
                 metricas["exame_fluoroscopia"] += 2
@@ -61,18 +61,18 @@ def atualizar_metricas(respostas_aluno, metricas):
             elif subesp == "Cardiovascular":
                 metricas["subespecialidade_cardiovascular"] += 4
 
+
+    if "Tem algum exame de imagem ou tema que gostaria de priorizar primeiro?" in r:
+        metricas = processar_resposta_aberta(
+            "Tem algum exame de imagem ou tema que gostaria de priorizar primeiro?",
+            r["Tem algum exame de imagem ou tema que gostaria de priorizar primeiro?"]
+        )
+
     # Perguntas abertas com LLM
     if "Há quanto tempo terminou a residência?" in r:
         metricas = processar_resposta_aberta(
             "Há quanto tempo terminou a residência?",
             r["Há quanto tempo terminou a residência?"],
-            metricas
-        )
-
-    if "No RadioClub, você pretende:" in r:
-        metricas = processar_resposta_aberta(
-            "No RadioClub, você pretende:",
-            r["No RadioClub, você pretende:"],
             metricas
         )
 

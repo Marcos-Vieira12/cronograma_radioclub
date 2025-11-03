@@ -9,9 +9,9 @@ def atualizar_metricas(respostas_aluno, metricas):
         for exame in r[q_exames]:
             if exame == "RX":
                 metricas["exame_rx"] += 4
-            elif exame == "USG Geral":
+            elif exame == "USG":
                 metricas["exame_usg"] += 4
-            elif exame == "Densitometria Óssea":
+            elif exame == "Densitometria":
                 metricas["exame_densitometria"] += 2
             elif exame == "Mamografia":
                 metricas["exame_mamografia"] += 2
@@ -21,7 +21,7 @@ def atualizar_metricas(respostas_aluno, metricas):
                 metricas["exame_rm"] += 2
             elif exame == "Doppler":
                 metricas["exame_doppler"] += 2
-            elif exame == "AngioTC / AngioRM":
+            elif exame == "AngioTC e AngioRM":
                 metricas["exame_angio"] += 2
             elif exame == "Fluoroscopia":
                 metricas["exame_fluoroscopia"] += 2
@@ -58,10 +58,10 @@ def atualizar_metricas(respostas_aluno, metricas):
                 metricas["subespecialidade_oncologia"] += 4
 
     # Perguntas abertas com LLM
-    if "Já decidiu qual área quer seguir no R4/Fellow?" in r:
+    if "Já decidiu qual área quer seguir no R4/Fellow? se sim, qual?" in r:
         metricas = processar_resposta_aberta(
-            "Já decidiu qual área quer seguir no R4/Fellow?",
-            r["Já decidiu qual área quer seguir no R4/Fellow?"],
+            "Já decidiu qual área quer seguir no R4/Fellow? se sim, qual?",
+            r["Já decidiu qual área quer seguir no R4/Fellow? se sim, qual?"],
             metricas
         )
 
