@@ -18,8 +18,6 @@ import { Part3 } from "./components/Part3";
 import { Cronograma } from "./components/Cronograma";
 import type { PartData, formQuestion, Step } from "./types/types";
 import './App.css'
-import { SortableContext } from "@dnd-kit/sortable";
-import DndKitList from "./components/SortableContext";
 
 /**
  * Maps each step to the next step in the workflow.

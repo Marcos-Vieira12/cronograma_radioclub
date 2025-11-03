@@ -3,7 +3,6 @@ import { Input } from "./Input";
 import { NavigationButtons } from "./NavigationButtons";
 import type { formQuestion } from "../types/types";
 import Swal from "sweetalert2";
-import { AlignCenter } from "lucide-react";
 
 interface IPart1Props {
   onNext: (data: formQuestion[]) => void;
