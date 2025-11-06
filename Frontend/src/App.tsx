@@ -127,9 +127,11 @@ export default function App() {
     didOpen: () => Swal.showLoading(),
   });
 
+
+  console.log(JSON.stringify(formatted))
   try {
     const response = await fetch(
-      "https://cronograma-radioclub.onrender.com/cronograma",
+      "https://cronograma-radioclub.onrender.com/cronograma/",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

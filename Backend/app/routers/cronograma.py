@@ -1,4 +1,5 @@
 # app/routers/cronograma.py
+import traceback
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
@@ -6,6 +7,7 @@ from typing import Dict, Any, Optional
 from core import run_cronograma, run_pdf
 import os
 import json
+from core import send_email_with_pdf
 from dotenv import load_dotenv
 load_dotenv()
 from sqlalchemy import create_engine, text
@@ -47,8 +49,12 @@ def gerar(form: FormularioAluno):
         return {"message": "SHOW!! agora nosso time de especialistas vai criar o seu cronograma e em breve te enviaremos por email 😁"}
 
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    
+        tb_str = traceback.format_exc()
+        print(tb_str)  # loga no console / Render Logs
+        raise HTTPException(
+            status_code=400,
+            detail=f"Erro interno: {str(e)}\n\nTraceback:\n{tb_str}"
+        )
 @router.post("/pdf")
 def gerar_pdf(cronograma_json: Dict[str, Any]):
     try:
@@ -78,8 +84,8 @@ def sendEmail(email:str, id: int):
 
     try:
         pdf_io = run_pdf(cronograma_json)
+        send_email_with_pdf(email, pdf_io)
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
-    
-    return "aaa"
+    return 
     

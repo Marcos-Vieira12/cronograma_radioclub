@@ -3,6 +3,7 @@ from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
+import os
 from typing import Dict, Any
 from io import BytesIO
 import copy
