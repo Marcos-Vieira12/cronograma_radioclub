@@ -1,4 +1,8 @@
 # core.py
+from email.mime.application import MIMEApplication
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import smtplib
 from typing import Dict, Any
 from io import BytesIO
 import copy
@@ -90,3 +94,37 @@ def run_pdf(cronograma_json: Dict[str, Any]) -> BytesIO:
                 "duration_min": item.get("duration_min"),
             })
     return gerar_pdf_bytes(semanas)
+
+def send_email_with_pdf(recipient_email: str, pdf_io: BytesIO):
+    sender_email = os.getenv("EMAIL_SENDER")
+    sender_password = os.getenv("EMAIL_PASSWORD")
+
+    # Monta o e-mail
+    msg = MIMEMultipart()
+    msg["From"] = sender_email
+    msg["To"] = recipient_email
+    msg["Subject"] = "Seu Cronograma RadioClub 📘"
+
+    # Corpo do e-mail
+    body = MIMEText(
+        "Olá!\n\nSegue em anexo o seu cronograma personalizado do RadioClub.\n\nBons estudos! 📚",
+        "plain",
+        "utf-8"
+    )
+    msg.attach(body)
+
+    # Anexa o PDF
+    pdf_io.seek(0)
+    pdf_part = MIMEApplication(pdf_io.read(), _subtype="pdf")
+    pdf_part.add_header("Content-Disposition", "attachment", filename="cronograma.pdf")
+    msg.attach(pdf_part)
+
+    # Envia via servidor SMTP
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(sender_email, sender_password)
+            server.send_message(msg)
+        print(f"✅ E-mail enviado com sucesso para {recipient_email}")
+    except Exception as e:
+        print("❌ Erro ao enviar e-mail:", e)
+        raise

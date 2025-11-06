@@ -63,3 +63,23 @@ def gerar_pdf(cronograma_json: Dict[str, Any]):
         media_type="application/pdf",
         headers={"Content-Disposition": f'attachment; filename="{filename}"'}
     )
+@router.post("/email")
+def sendEmail(email:str, id: int):
+    with engine.connect() as conn:
+        query = text("""SELECT cronograma 
+                     from cronogramas 
+                     where email = :email and id = :id""")
+    result = conn.execute(query, {"email": email, "id": id}).fechone()
+
+    if not result:
+        raise Exception("Nenhum cronograma encontrado")
+
+    cronograma_json = json.loads(result[0])
+
+    try:
+        pdf_io = run_pdf(cronograma_json)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    
+    return "aaa"
+    
