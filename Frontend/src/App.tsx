@@ -89,7 +89,7 @@ export default function App() {
     if (!Array.isArray(part.data)) return; // evita erro se part.data for undefined
     part.data.forEach((q: any) => {
       // Ignora email e nível na lista de respostas
-      if (q.id === "email" || q.id === "level") return;
+      if (q.id === "email" || q.id === "level" || q.id === "name") return;
 
       if (q.answer !== undefined && q.answer !== null && q.answer !== "") {
         respostas[q.question] = q.answer;
@@ -106,13 +106,13 @@ export default function App() {
     allQuestions.find((q: any) => q.id === "email")?.answer || "";
   const nivel =
     allQuestions.find((q: any) => q.id === "level")?.answer || "";
+  const name =
+    allQuestions.find((q: any) => q.id === "name")?.answer || "";
 
-  // 🔹 Passo 3: Gerar ID aleatório
-  const respondent_id = Math.random().toString(36).substring(2, 8);
 
   // 🔹 Passo 4: Montar o JSON no formato do backend
   const formatted = {
-    respondent_id,
+    name,
     nivel,
     email,
     respostas,
@@ -131,7 +131,7 @@ export default function App() {
   console.log(JSON.stringify(formatted))
   try {
     const response = await fetch(
-      "https://cronograma-radioclub.onrender.com/cronograma/",
+      "http://127.0.0.1:8000/cronograma/",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

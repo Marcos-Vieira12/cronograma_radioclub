@@ -26,6 +26,7 @@ export function Part1(props: IPart1Props) {
 
   // ======= 1. Estado único para todas as respostas =======
   const [answers, setAnswers] = useState<Record<string, any>>({
+    name : props.InitialData?.find(q => q.id === "name")?.answer || "",
     level : props.InitialData?.find(q => q.id === "level")?.answer || "",
     objectives : props.InitialData?.find(q => q.id === "objectives")?.answer || [],
     email : props.InitialData?.find(q => q.id === "email")?.answer || "",
@@ -35,6 +36,14 @@ export function Part1(props: IPart1Props) {
 
   // ======= 2. Definição dinâmica do formulário =======
   const formQuestions: formQuestion[] = [
+
+  {
+    id: "name",
+    question: "Qual seu nome?",
+    inputType: "text",
+    isRequired: true,
+    answer: answers.name
+  },
     
   {
     id: "email",

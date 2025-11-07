@@ -65,7 +65,8 @@ def atualizar_metricas(respostas_aluno, metricas):
     if "Tem algum exame de imagem ou tema que gostaria de priorizar primeiro?" in r:
         metricas = processar_resposta_aberta(
             "Tem algum exame de imagem ou tema que gostaria de priorizar primeiro?",
-            r["Tem algum exame de imagem ou tema que gostaria de priorizar primeiro?"]
+            r["Tem algum exame de imagem ou tema que gostaria de priorizar primeiro?"],
+            metricas
         )
 
     # Perguntas abertas com LLM

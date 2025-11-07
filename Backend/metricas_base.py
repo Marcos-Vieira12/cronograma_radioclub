@@ -43,6 +43,8 @@ METRICAS = {
     "subespecialidade_gineco": 0,
     "subespecialidade_intervencao": 0,
     "subespecialidade_cardiovascular": 0,
+    "subespecialidade_oncologia": 0,
+    "subespecialidade_urologia": 0,
 
     "subespecialidade_financas": 0,                     
     "subespecialidade_inteligencia_artificial": 0,      
