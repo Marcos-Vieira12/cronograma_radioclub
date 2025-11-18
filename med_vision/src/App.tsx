@@ -12,6 +12,7 @@ interface Cronograma {
   respostas: any;
   cronograma: any;
   status: boolean; // true = enviado / false = pendente
+  modifier: string;
 }
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
       setLoading(true);
       setError("");
 
-      const response = await fetch("https://cronograma-radioclub.onrender.com/cronograma/getall", {
+      const response = await fetch("http://127.0.0.1:8000/cronograma/getall", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
@@ -74,7 +75,7 @@ function App() {
     });
 
     try {
-      const response = await fetch(`https://cronograma-radioclub.onrender.com/cronograma/email?id=${id}`, {
+      const response = await fetch(`http://127.0.0.1:8000/cronograma/email?id=${id}`, {
         method: "POST",
       });
 
@@ -129,7 +130,7 @@ function App() {
                 <b>Nível:</b> {c.nivel}
               </p>
               <p className={c.status ? "Status Enviado" : "Status Pendente"}>
-                {c.status ? "Enviado" : "Pendente"}
+                {c.status ? "Enviado" : "Aberto"} : {new Date(c.modifier).toLocaleDateString("pt-BR")}
               </p>
             </div>
           ))}
@@ -151,7 +152,7 @@ function App() {
                 <b>Nível:</b> {c.nivel}
               </p>
               <p className={c.status ? "Status Enviado" : "Status Pendente"}>
-                {c.status ? "Enviado" : "Pendente"}
+                {c.status ? "Enviado" : "aberto"} : {new Date(c.modifier).toLocaleDateString("pt-BR")}
               </p>
             </div>
           ))}

@@ -141,7 +141,8 @@ def getall():
             "respostas": row["respostas"],
             "cronograma": row["cronograma"],
             "status": row["status"],
-            "name": row["name"]
+            "name": row["name"],
+            "modifier": row["modifier"]
         })
 
     return {
