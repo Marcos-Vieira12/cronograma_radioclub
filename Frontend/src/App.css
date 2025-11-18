@@ -1,37 +1,353 @@
+/* ===== BASE ===== */
 #root {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0.5rem;
   text-align: center;
-}
-
-.card {
-  padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
 }
 
-/* Estilos aplicados a todos os elementos <form> */
+/* ===== FORM PRINCIPAL ===== */
 form {
-  width: 70%;
-  margin: 40px auto;        /* centraliza na tela */
-  padding: 24px 32px;       /* espaçamento interno */
-  border-radius: 16px;      /* bordas arredondadas */
-  box-shadow: 0 4px 200px rgba(0, 0, 0, 0.479); /* leve sombra */
+  /* dimensões proporcionais à tela */
+  width: 60vw;
+  max-width: 800px;
+  height: auto;
+  min-height: 70vh;
+
+  /* centralização */
+  margin: 5vh auto;
+  margin-top: .5rem;
+  padding: 1.5rem;
+
+  /* aparência */
+  border-radius: 10px;
+  background: linear-gradient(
+    360deg,
+    #607BE1 0%,
+    #4562E7 25%,
+    #2C4EDC 50%,
+    #2238B9 75%,
+    #1B2AAE 100%
+  );
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  /* comportamento */
+  opacity: 1;
   display: flex;
-  flex-direction: column;   /* empilha os itens verticalmente */
-  box-sizing: border-box;
-  text-align: justify;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+form * {
+  transition: all 0.2s ease;
+}
+
+/* ===== QUESTION ===== */
+form .question {
+  width: 51vw;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: .75rem;
+  padding: 1rem;
+}
+
+/* ===== INPUTS E TEXTAREAS ===== */
+form .question input,
+form .question textarea,
+form .question .checkbox,
+form .question .select__control {
+  width: 100%;
+  border-radius: .5rem;
+  margin: 0 auto;
+  border: .05rem solid #D1D5DB;
+  background: #FFFFFF;
+  box-shadow: .4rem .5rem .3rem 0rem #00000040;
+  text-align: left;
+
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  color: #000000;
+  padding: 0 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* altura padrão dos inputs */
+form .question input, 
+form .question .select__control{
+  height: clamp(2.5rem, 5vh, 3.2rem);
+}
+
+/* altura e ajustes do textarea */
+form .question textarea {
+  height: calc(3 * clamp(2.5rem, 5vh, 3.2rem));
+  padding: 0.75rem 1rem;
+  resize: vertical;
+}
+
+/* foco — vale para ambos */
+form .question input:hover,
+form .question textarea:hover,
+form .question .select__control:hover {
+  border-color: #607BE1;
+  box-shadow: 0 0 6px #607BE160;
+}
+
+/* ===== CHECKBOX ===== */
+form .question input[type="checkbox"] {
+  /* remove estilos herdados do estilo base */
+  width: auto;
+  height: auto;
+  padding: 0;
+  box-shadow: none;
+  background: none;
+  border: none;
+
+  /* aplica novo visual */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 1.5rem;
+  aspect-ratio: 1 / 1;
+  border: 0.32em solid #ccc;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Quando o usuário clica (ganha foco) → brilha verde */
+form .question input[type="checkbox"]:active {
+  outline: none;
+  box-shadow: 0 0 0 6px rgba(22, 244, 201, 0.4) !important;
+  border-color: #16F4C9 !important;
+}
+
+form .question input[type="checkbox"]:hover {
+  border-color: #16F4C9 !important;
+}
+
+/* Estados do checkbox */
+form .question input[type="checkbox"]:not(:checked) {
+  box-shadow: none;
+  border-color: #ccc;
+}
+
+form .question input[type="checkbox"]:checked {
+  background-color: #16F4C9;
+  border-color: #ccc;
+  box-shadow: none !important;
+}
+
+/* ===== SELECT ===== */
+form .question .select__control,
+form .question .select__menu{
+  align-items: center;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0%;
+  margin: 0 auto;
+}
+
+form .question .select__control--menu-is-open{
+  border-end-end-radius: 0px;
+  border-end-start-radius: 0px;
+  border: #d3d3d3;
+}
+form .question .select__menu{
+  background-color: #d3d3d3;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  color: #000000;
+  font-weight: 300;
+  box-shadow: 0 4px 10px rgba(0,0,0,.3);
+  border-end-end-radius: 12px;
+  border-end-start-radius: 12px;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+  transform: translateY(-60px);
+  transform-origin: top center;
+}
+
+form .question .select__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideDown .5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  transform-origin: top center;
+
+}
+
+form .question .select__value-container {
+  justify-content: center;
+}
+form .question .select__placeholder,
+form .question .select__single-value {
+  width: 100%;
+  text-align: center;
+  color: #888;
+  font-weight: 300;
+}
+form .question .select__single-value{
+  color: #000000;
+}
+
+form .question .select__option {
+  background: #fff;
+  color: #2C4EDC;
+  border-radius: 20px;
+  padding: .5rem 1rem;
+  margin: .3rem 0;
+  text-align: center;
+  width: fit-content;
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+/* Hover (azul invertendo a cor do texto) */
+form .question .select__option:hover {
+  background: #2C4EDC;
+  color: #fff;
+}
+
+/* Selecionada (verde #16F4C9) */
+form .question .select__option--is-selected {
+  background: #16F4C9;
+  color: #333;
+}
+
+form .question .select-placeholder{
+  color: #888;
+  text-align: center;
+}
+form .question .select-option{
+background-color: #FFFFFF;
+width: fit-content;
+height: fit-content;
+}
+
+
+/* ===== TEXTOS ===== */
+form .question p {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #ffffff;
+  margin: 0;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+/* ===== CABEÇALHOS ===== */
 h2 {
   text-align: center;
 }
 
-/* Responsividade */
+/* ===== CHECKBOX WRAPPER ===== */
+.checkbox-option {
+  margin-top: .288rem;
+  margin-bottom: .088rem;
+  font-weight: 350;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.checkbox-label:hover {
+font-weight: 400;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin: 0;
+  width: auto;
+}
+
+/* ===== INPUTS, SELECTS, TEXTAREAS GERAIS ===== */
+form input,
+form .select__control,
+form .select__option,
+form textarea {
+  font-weight: 350;
+  font-family: "Montserrat";
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+  border-color: #4a90e2;
+}
+
+/* ===== BOTÕES ===== */
+form button {
+  padding: 12px 20px;
+  background-color: #16F4C9;
+  color: black;
+  font-weight: 400;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+form button:hover {
+  background-color: #13c4a0;
+}
+form button:active {
+  box-shadow: 0 0 0 1rem rgba(22, 244, 201, 0.4);
+}
+
+
+/* Container do select (layout no seu form/question) */
+.select__controle {
+  border: none;
+  border-radius: 10px;
+  background: #faf7f7;
+  box-shadow: 0 4px 8px rgba(0,0,0,.15);
+  cursor: pointer;
+}
+
+/* placeholder + valor centralizados */
+
+
+/* Menu dropdown (o cinza) */
+.select__menuu {
+  background: #d3d3d3;
+  border-radius: 12px;
+  width: 60%;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+/* Centraliza a lista de opções dentro do menu */
+
+
+/* Opção em formato “pílula” */
+
+
+
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 600px) {
   form {
     padding: 16px 20px;
@@ -39,52 +355,123 @@ h2 {
   }
 }
 
-/* Opcional — estilo para inputs e botões dentro do form */
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.2s ease;
+/* ─── Slide Down ─── */
+@keyframes slideDown {
+  from { transform: translateY(-20px); }
+  to   { transform: translateY(0); }
 }
 
-form input:focus,
-form select:focus,
-form textarea:focus {
-  border-color: #4a90e2;
+/* ─── Slide Up ─── */
+@keyframes slideUp {
+  from { transform: translateY(20px); }
+  to   { transform: translateY(0); }
 }
 
-form button {
-  padding: 12px 20px;
-  background-color: #4a90e2;
-  color: white;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+/* ─── Slide Left ─── */
+@keyframes slideLeft {
+  from { transform: translateX(20px); }
+  to   { transform: translateX(0); }
 }
 
-form button:hover {
-  background-color: #357ab8;
+/* ─── Slide Right ─── */
+@keyframes slideRight {
+  from { transform: translateX(-20px); }
+  to   { transform: translateX(0); }
 }
 
-.checkbox-option {
-  margin-bottom: 6px; /* espaço entre as opções */
+/* ─── Slide Diagonal (↘) ─── */
+@keyframes slideDownRight {
+  from { transform: translate(-20px, -20px); }
+  to   { transform: translate(0, 0); }
 }
 
-.checkbox-label {
-  display: inline-flex; /* mantém caixa + texto na mesma linha */
-  align-items: center;
-  gap: 8px; /* espaço entre eles */
-  cursor: pointer;
+/* ─── Slide Diagonal (↙) ─── */
+@keyframes slideDownLeft {
+  from { transform: translate(20px, -20px); }
+  to   { transform: translate(0, 0); }
+}
+/* ─── Fade In ─── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-.checkbox-label input[type="checkbox"] {
-  margin: 0; /* remove margens automáticas */
-  width: auto;
+/* ─── Fade Out ─── */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }
+
+/* ─── Fade In Up ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Fade In Down ─── */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Fade In Left ─── */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ─── Fade In Right ─── */
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+/* ─── Zoom In ─── */
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* ─── Zoom Out ─── */
+@keyframes zoomOut {
+  from { transform: scale(1); opacity: 1; }
+  to   { transform: scale(0.8); opacity: 0; }
+}
+
+/* ─── Pop (leve crescimento e volta) ─── */
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+/* ─── Rotate In ─── */
+@keyframes rotateIn {
+  from { transform: rotate(-15deg); opacity: 0; }
+  to   { transform: rotate(0); opacity: 1; }
+}
+
+/* ─── Rotate Out ─── */
+@keyframes rotateOut {
+  from { transform: rotate(0); opacity: 1; }
+  to   { transform: rotate(15deg); opacity: 0; }
+}
+
+/* ─── Wiggle (balanço horizontal leve) ─── */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  75% { transform: rotate(-2deg); }
+}
+
+/* ─── Pulse (cresce e diminui suavemente) ─── */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* ─── Shake (vibra rapidamente) ─── */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+

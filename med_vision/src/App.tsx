@@ -23,7 +23,7 @@ function App() {
       setLoading(true);
       setError("");
 
-      const response = await fetch("http://127.0.0.1:8000/cronograma/getall", {
+      const response = await fetch("https://cronograma-radioclub.onrender.com/cronograma/getall", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });

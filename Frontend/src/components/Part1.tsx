@@ -41,6 +41,7 @@ export function Part1(props: IPart1Props) {
     id: "name",
     question: "Qual seu nome?",
     inputType: "text",
+    placeholder: "Digite seu nome",
     isRequired: true,
     answer: answers.name
   },
@@ -49,6 +50,7 @@ export function Part1(props: IPart1Props) {
     id: "email",
     question: "Por gentileza, confirme o Email de sua assinatura:",
     inputType: "email",
+    placeholder: "digite seu email",
     isRequired: true,
     answer: answers.email,
   },
@@ -167,23 +169,17 @@ const handleAdd = (id: string, value: any) => {
 // ======= 5. Render =======
   return (
     <form className="form" noValidate onSubmit={(e) => { e.preventDefault(); handlerNext(); }}>
-      <h2>Parte 1</h2>
+    {formQuestions.map((q) => (
+      <>
+        <Input 
+          key={q.id}
+          question={q}
+          error = {errors[q.id]}
+          onAdd={(value) => handleAdd(q.id, value)}
+        />
+      </>
+    ))}
 
-      {formQuestions.map((q) => (
-        <div key={q.id} >
-          <Input
-            question={q}
-            onAdd={(value) => handleAdd(q.id, value)}
-          />
-
-          {/* Exibe mensagem de erro, se existir */}
-          {errors[q.id] && errors[q.id].length > 0 && (
-            <div style={{ color: "red", fontSize: "0.875rem", marginTop: "2px" }}>
-              {errors[q.id].join(", ")}
-            </div>
-          )}
-        </div>
-      ))}
 
       <NavigationButtons nextvisible={true} />
     </form>

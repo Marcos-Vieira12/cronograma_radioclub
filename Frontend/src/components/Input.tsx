@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import type { formQuestion } from "../types/types";
+import Select from "react-select";
+import { AlignCenter } from "lucide-react";
+
 
 interface IInputProps {
   question: formQuestion;
+  error?:String[]; 
   onAdd: (value: any) => void;
 }
 
@@ -27,7 +31,7 @@ export function Input(props: IInputProps) {
   };
 
   return (
-    <div className="card">
+    <div className="question">
       <p>{props.question.question}</p>
 
       {/* casos básicos */}
@@ -37,7 +41,6 @@ export function Input(props: IInputProps) {
             placeholder={props.question.placeholder}
             value={props.question.answer as string}
             onChange={(e) => handleChange(e.target.value)}
-            style={{ width: "100%", height: "80px", padding: "8px" }}
           />
         ) : (
           <input
@@ -45,17 +48,37 @@ export function Input(props: IInputProps) {
             placeholder={props.question.placeholder}
             value={props.question.answer as string}
             onChange={(e) => handleChange(e.target.value)}
-            style={{ width: "100%", padding: "8px" }}
           />
         )
       )}
 
       {/* select simples */}
       {props.question.inputType === "select" && (
-        <select
+        <Select isSearchable={false} 
+          menuPlacement="bottom"            // abre para baixo
+          menuPosition="absolute"           // posicionamento padrão
+          classNamePrefix="select"          // prefixo para classes internas
+          value={
+            props.question.answer
+            ? { value: props.question.answer, label: props.question.answer }
+            : null
+          }
+          onChange={(selectedOption) => handleChange(selectedOption?.value || "")}
+          options={
+            props.question.options?.map((opt) => ({
+            value: opt,
+            label: opt,
+            })) || []
+          }
+          placeholder={props.question.placeholder ?? "Selecione..."}
+          
+        />                                              
+
+
+      )}
+          {/*<select
           value={props.question.answer as string}
           onChange={(e) => handleChange(e.target.value)}
-          style={{ width: "100%", padding: "8px" }}
         >
           <option value="">{props.question.placeholder ?? "Selecione..."}</option>
           {props.question.options?.map((opt) => (
@@ -63,12 +86,11 @@ export function Input(props: IInputProps) {
               {opt}
             </option>
           ))}
-        </select>
-      )}
+        </select>*/}
 
       {/* múltipla escolha com checkbox */}
       {props.question.inputType === "checkbox" && (
-        <div>
+        <div className="checkbox">
           {props.question.options?.map((opt) => (
             <div key={opt} className="checkbox-option">
               <label className="checkbox-label">
@@ -115,7 +137,6 @@ export function Input(props: IInputProps) {
                   }}
                 />
                 {props.question.openOption}
-              </label>
               {selected.includes(customOption) && (
                 <input
                   type="text"
@@ -129,11 +150,16 @@ export function Input(props: IInputProps) {
                     setSelected(newSelected);
                     handleChange(newSelected);
                   }}
-                  style={{ marginLeft: "8px", padding: "4px" }}
                 />
               )}
+              </label>
             </div>
           )}
+        </div>
+      )}
+      {props.error && props.error.length > 0 && (
+        <div style={{ color: "#F87171", textShadow: "0 0 6px rgba(0,0,0,0.5)", fontSize: "0.875rem", marginTop: "2px" }}>
+          {props.error.join(", ")}
         </div>
       )}
     </div>

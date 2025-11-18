@@ -199,8 +199,6 @@ const handlerNext = () => {
   // ======= Render =======
   return (
     <form onSubmit={(e) => { e.preventDefault(); handlerNext(); }}>
-      <h2>Parte 2</h2>
-
       {formQuestions.map(q => (
         <div key={q.id}>
           <Input question={q} onAdd={(value) => handleAdd(q.id, value)} />

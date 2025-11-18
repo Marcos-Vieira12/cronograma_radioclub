@@ -8,16 +8,31 @@ interface INavigationButtonsProps {
 }
 export function NavigationButtons(props: INavigationButtonsProps) {
     return (
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px', alignContent: 'center' }}>
-            {props.prevvisible && (<button type = "button" onClick={props.onPrev || (() => {})}>
-                {props.backLabel || 'Voltar'}
-            </button>
-            )}
-            {props.nextvisible && (
-                <button type = "submit">
-                    {props.nextLabel || 'Próximo'}
-                </button>
-            )}
-        </div>
+        <div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    width: "100%",
+    marginTop: "20px",
+    justifyContent: props.prevvisible && props.nextvisible
+      ? "space-between"
+      : props.nextvisible
+      ? "flex-end"
+      : "flex-start",
+  }}
+>
+  {props.prevvisible && (
+    <button type="button" onClick={props.onPrev || (() => {})}>
+      {props.backLabel || "Voltar"}
+    </button>
+  )}
+
+  {props.nextvisible && (
+    <button type="submit">
+      {props.nextLabel || "Próximo"}
+    </button>
+  )}
+</div>
+
     );
 }

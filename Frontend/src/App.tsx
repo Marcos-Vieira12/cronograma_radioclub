@@ -15,7 +15,8 @@ import { useState } from "react";
 import { Part1 } from "./components/Part1";
 import { Part2 } from "./components/Part2";
 import { Part3 } from "./components/Part3";
-import { Cronograma } from "./components/Cronograma";
+import titleImg from "./assets/title.png";
+import mascoteImg from "./assets/mascote.png";
 import type { PartData, formQuestion, Step } from "./types/types";
 import './App.css'
 import Swal from "sweetalert2";
@@ -169,7 +170,17 @@ export default function App() {
 
   return (
     <div>
-
+      <img 
+        src={titleImg} 
+        alt="Título"
+        style={{
+          display: "block",
+          width: "40vw",
+          height: "auto",
+          margin: "0 auto",
+          alignContent: "center",
+        }}
+      />
      {/* <DndKitList />*/}
       {/* === Part 1 === */}
       {step === "part1" && (
@@ -198,6 +209,22 @@ export default function App() {
           InitialData={formData.find(p => p.part === "part3")?.data}
         />
       )}
+
+      {/* Mascote no canto inferior direito, ao lado do formulário */}
+      <img
+        src={mascoteImg}
+        alt="Mascote"
+        style={{
+          position: "fixed",
+          right: "0rem",
+          bottom: "0rem",
+          width: "18vw",
+          height: "auto",
+          
+          zIndex: 1000,
+          pointerEvents: "none"
+        }}
+      />
     </div>
   );
 }
