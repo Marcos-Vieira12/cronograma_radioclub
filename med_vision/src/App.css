@@ -1,42 +1,116 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: inherit; /* opcional */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.Top {
+  width: 100%;
+  height: clamp(4.8rem, 8vw + 8vh, 20rem);  
+  background-color: #2F53EA; 
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 10vw;               /* espaçamento proporcional */
+  box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Top img
+{
+  height: clamp(3.6rem, 6vw, 8vw);
+}
+.Top h2
+{
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2vw, 3vw);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.Top * {
+  margin: 0;
 }
 
-.card {
-  padding: 2em;
+/* Container principal da lista */
+.List {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  padding-top: .5vh;
+}
+.List > p {
+  width: fit-content;
+  height: auto;
+  background-color: #2F53EA;
+  color: white;
+  padding: 0.6rem 1.8rem;
+  border-radius: 2rem;
+  font-size: clamp(0.9rem, 1.4vw, 1.8vw);
+  font-weight: 500;
+  white-space: nowrap;
 }
 
-.read-the-docs {
-  color: #888;
+/* Wrapper dos cards */
+.CardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* === CARD PRINCIPAL === */
+.Card {
+  width: 240px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Hover */
+.Card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Título */
+.Card h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Parágrafos gerais */
+.Card p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Email */
+.Card .Email {
+  color: #555;
+}
+
+/* Nível */
+.Card .Nivel b {
+  color: #333;
+}
+
+/* Status */
+.Status {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.Status.Enviado {
+  color: #4caf50;
+}
+
+.Status.Pendente {
+  color: #ff9800;
 }

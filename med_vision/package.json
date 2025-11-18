@@ -12,6 +12,7 @@
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-switch": "^7.1.0",
     "sweetalert2": "^11.26.3"
   },
   "devDependencies": {

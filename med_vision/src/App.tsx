@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import './App.css';
+import logo from './assets/Logo.png';
+import mascoteImg from './assets/Mascote.png';
 
 interface Cronograma {
   id: string;
@@ -8,14 +11,13 @@ interface Cronograma {
   nivel: string;
   respostas: any;
   cronograma: any;
-  status: boolean;
+  status: boolean; // true = enviado / false = pendente
 }
 
 function App() {
   const [todosCronogramas, setTodosCronogramas] = useState<Cronograma[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [statusAtual, setStatusAtual] = useState<"pendente" | "enviado">("pendente");
 
   // 🔹 Busca TODOS os cronogramas apenas uma vez
   async function carregarTodos() {
@@ -44,12 +46,11 @@ function App() {
     carregarTodos();
   }, []);
 
-  // 🔹 Filtra no front
-  const cronogramasVisiveis = todosCronogramas.filter((c) =>
-    statusAtual === "pendente" ? !c.status : c.status
-  );
+  // 🔹 Agora você tem duas listas SEPARADAS:
+  const cronogramasPendentes = todosCronogramas.filter(c => !c.status);
+  const cronogramasEnviados = todosCronogramas.filter(c => c.status);
 
-  // 🔹 Envio do cronograma
+  // 🔹 Função de envio (mantida)
   async function handleEnviar(id: string, email: string) {
     const confirm = await Swal.fire({
       title: "Enviar cronograma?",
@@ -73,7 +74,7 @@ function App() {
     });
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/cronograma/email?id=${id}`, {
+      const response = await fetch(`https://cronograma-radioclub.onrender.com/cronograma/email?id=${id}`, {
         method: "POST",
       });
 
@@ -87,9 +88,9 @@ function App() {
         confirmButtonColor: "#3085d6",
       });
 
-      // Atualiza lista local sem precisar refazer fetch
-      setTodosCronogramas((prev) =>
-        prev.map((c) => (c.id === id ? { ...c, status: true } : c))
+      // Atualiza status localmente
+      setTodosCronogramas(prev =>
+        prev.map(c => (c.id === id ? { ...c, status: true } : c))
       );
 
     } catch (error: any) {
@@ -106,85 +107,70 @@ function App() {
   if (error) return <p style={{ padding: 20 }}>Erro: {error}</p>;
 
   return (
-    <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
-      <h2 style={{ marginBottom: "10px" }}>Lista de Cronogramas</h2>
+    <div className="App">
 
-      {/* 🔹 Botões de filtro */}
-      <div style={{ marginBottom: "20px" }}>
-        <button
-          onClick={() => setStatusAtual("pendente")}
-          style={{
-            marginRight: "10px",
-            backgroundColor: statusAtual === "pendente" ? "#3085d6" : "#ccc",
-            color: "white",
-            border: "none",
-            padding: "8px 16px",
-            borderRadius: "6px",
-            cursor: "pointer",
-          }}
-        >
-          Pendentes
-        </button>
-
-        <button
-          onClick={() => setStatusAtual("enviado")}
-          style={{
-            backgroundColor: statusAtual === "enviado" ? "#3085d6" : "#ccc",
-            color: "white",
-            border: "none",
-            padding: "8px 16px",
-            borderRadius: "6px",
-            cursor: "pointer",
-          }}
-        >
-          Enviados
-        </button>
+      <div className="Top">
+        <img src={logo} alt="Logo" />
+        <h2>Central dos cronogramas dos alunos</h2>
       </div>
 
-      {/* 🔹 Cards */}
-      {cronogramasVisiveis.length === 0 && <p>Nenhum cronograma encontrado.</p>}
-
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
-        {cronogramasVisiveis.map((c) => (
-          <div
-            key={c.id}
-            onClick={() => handleEnviar(c.id, c.email)}
-            style={{
-              width: "240px",
-              padding: "12px",
-              borderRadius: "8px",
-              backgroundColor: "#f7f7f7",
-              boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-              cursor: "pointer",
-              transition: "all 0.2s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.03)";
-              e.currentTarget.style.boxShadow = "0 4px 10px rgba(0,0,0,0.15)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
-            }}
-          >
-            <h3 style={{ margin: "0 0 6px 0", fontSize: "16px", color: "#333" }}>{c.name}</h3>
-            <p style={{ margin: "2px 0", fontSize: "13px", color: "#666" }}>{c.email}</p>
-            <p style={{ margin: "2px 0", fontSize: "13px", color: "#666" }}>
-              <b>Nível:</b> {c.nivel}
-            </p>
-            <p
-              style={{
-                marginTop: "8px",
-                fontSize: "12px",
-                fontWeight: "bold",
-                color: c.status ? "#4caf50" : "#ff9800",
-              }}
+      <div className="List">
+        <p>Cronogramas Abertos</p>
+        <div className="CardsWrapper">
+          {cronogramasPendentes.map((c) => (
+            <div
+              key={c.id}
+              className="Card"
+              onClick={() => handleEnviar(c.id, c.email)}
             >
-              {c.status ? "Enviado" : "Pendente"}
-            </p>
-          </div>
-        ))}
+              <h3>{c.name}</h3>
+              <p className="Email">{c.email}</p>
+              <p className="Nivel">
+                <b>Nível:</b> {c.nivel}
+              </p>
+              <p className={c.status ? "Status Enviado" : "Status Pendente"}>
+                {c.status ? "Enviado" : "Pendente"}
+              </p>
+            </div>
+          ))}
+        </div>
+
+
+        <p>Cronogramas Enviados</p>
+
+        <div className="CardsWrapper">
+          {cronogramasEnviados.map((c) => (
+            <div
+              key={c.id}
+              className="Card"
+              onClick={() => handleEnviar(c.id, c.email)}
+            >
+              <h3>{c.name}</h3>
+              <p className="Email">{c.email}</p>
+              <p className="Nivel">
+                <b>Nível:</b> {c.nivel}
+              </p>
+              <p className={c.status ? "Status Enviado" : "Status Pendente"}>
+                {c.status ? "Enviado" : "Pendente"}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
+
+      <img
+        src={mascoteImg}
+        alt="Mascote"
+        style={{
+          position: "fixed",
+          right: "3vw",
+          bottom: "10.5vh",
+          width: "20.5vw",
+          height: "auto",
+          zIndex: 1000,
+          pointerEvents: "none"
+        }}
+      />
     </div>
   );
 }

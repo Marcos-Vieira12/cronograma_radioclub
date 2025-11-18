@@ -122,7 +122,8 @@ def getall():
                 respostas,
                 cronograma,
                 status,
-                name
+                name,
+                modifier
             FROM cronogramas
             ORDER BY name ASC
         """)
