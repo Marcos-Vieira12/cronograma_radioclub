@@ -1,0 +1,256 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: inherit; /* opcional */
+}
+
+
+.Top {
+  width: 100%;
+  height: clamp(4.8rem, 8vw + 8vh, 20rem);  
+  background-color: #2F53EA; 
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 10vw;               /* espaçamento proporcional */
+  box-sizing: border-box;
+}
+
+.Top img
+{
+  height: clamp(3.6rem, 6vw, 8vw);
+}
+.Top h2
+{
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2vw, 3vw);
+}
+
+.Top * {
+  margin: 0;
+}
+
+/* Container principal da lista */
+.List {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  padding-top: .5vh;
+  overflow: hidden;
+
+}
+.List > p {
+  width: fit-content;
+  height: auto;
+  background-color: #2F53EA;
+  color: white;
+  padding: 0.6rem 1.8rem;
+  border-radius: 2rem;
+  font-size: clamp(0.9rem, 1.4vw, 1.8vw);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Wrapper dos cards */
+.CardsWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;       /* impede quebrar linha */
+  gap: 50px;
+
+  max-width: calc(100% - 24vw);
+  overflow-x: auto;        /* scroll horizontal */
+  overflow-y: hidden;
+  padding-bottom: 1rem;    /* espaço pra não cortar a sombra/hover */
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0,                      /* esquerda totalmente visível */
+    rgba(0, 0, 0, 1) calc(100% - 32px),      /* visível até perto do fim */
+    rgba(0, 0, 0, 0) 100%                    /* some no final */
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0,
+    rgba(0, 0, 0, 1) calc(100% - 32px),
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.CardsWrapper::-webkit-scrollbar {
+  height: 5px;
+}
+
+.CardsWrapper::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+.CardsWrapper::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.15);
+  border-radius: 10px;
+}
+
+.CardsWrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.25);
+}
+
+
+/* === CARD PRINCIPAL === */
+.Card {
+  min-width: 240px;
+  padding: 12px;
+  border-radius: 8px;
+  
+  /* sombra mais forte embaixo e à direita */
+  box-shadow: 4px 4px 6px rgba(150,150,150,0.5);
+
+  background-color: #f7f7f7;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+}
+
+/* Hover: remove completamente a sombra */
+.Card:hover {
+  transform: scale(1.03);
+  box-shadow: none;
+  box-shadow: 0 0 0 1px rgba(47, 83, 234, 0.4);
+
+}
+
+
+/* Título */
+.Card h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Parágrafos gerais */
+.Card p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Email */
+.Card .Email {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Nível */
+.Card .Nivel b {
+  color: #333;
+}
+
+/* Status */
+.Status {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.Status.Enviado {
+  color: #4caf50;
+}
+
+.Status.Pendente {
+  color: #ff9800;
+}
+
+/* Linha com status + botões */
+.StatusRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+/* Status + data */
+.StatusDate {
+  font-size: 11px;     /* menor que antes */
+  color: #666;
+  margin: 0;
+  white-space: nowrap; /* evita quebrar */
+}
+
+/* Email também menor */
+
+
+/* Wrapper dos botões */
+.CardButtons {
+  display: flex;
+  gap: 6px;
+}
+
+/* Botões menores */
+.CardButtons .Btn {
+  padding: 4px 8px;   /* menor */
+  font-size: 10px;    /* menor */
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Enviado azul */
+.CardButtons .Enviado {
+  background-color: #2F53EA;
+  color: white;
+  cursor: default;
+  opacity: 0.9;
+}
+
+/* Editar verde */
+.CardButtons .Editar {
+  background-color: #16F4C9;
+  color: black;
+}
+.CardButtons .Editar:hover {
+  opacity: 0.85;
+}
+
+/* Excluir verde */
+.CardButtons .Excluir {
+  background-color: #16F4C9;
+  color: black;
+}
+.CardButtons .Excluir:hover {
+  opacity: 0.85;
+}
+
+/* Desabilitado */
+.CardButtons .Btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* estilo do swal */
+
+
+/* Botão de confirmar */
+/* Estilo base dos botões */
+.swal2-confirm,
+.swal2-cancel {
+  border-radius: 8px !important;
+  box-shadow: 4px 4px 6px rgba(150,150,150,0.5);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+/* Remove a sombra no hover */
+.swal2-confirm:hover,
+.swal2-cancel:hover {
+  box-shadow: none !important;
+}
+
+.swal2-container {
+  z-index: 9999 !important;
+}
+
+

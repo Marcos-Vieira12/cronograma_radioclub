@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hello-pangea/dnd": "^18.0.1",
+    "@radix-ui/react-popover": "^1.1.15",
+    "framer-motion": "^12.23.24",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-select": "^5.10.2",
     "react-switch": "^7.1.0",
     "sweetalert2": "^11.26.3"
   },

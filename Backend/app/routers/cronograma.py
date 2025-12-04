@@ -11,7 +11,10 @@ from core import send_email_with_pdf
 from dotenv import load_dotenv
 load_dotenv()
 from sqlalchemy import create_engine, text
-engine = create_engine(os.getenv("DB_URL"))
+engine = create_engine(os.getenv("DB_URL"),    
+    pool_pre_ping=True,   # 👈 ESSENCIAL
+    pool_size=5,
+    max_overflow=10)
 
 router = APIRouter(prefix="/cronograma", tags=["cronograma"])
 

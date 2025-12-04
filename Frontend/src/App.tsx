@@ -132,7 +132,7 @@ export default function App() {
   console.log(JSON.stringify(formatted))
   try {
     const response = await fetch(
-      "http://127.0.0.1:8000/cronograma/",
+      "https://cronograma-radioclub.onrender.com/cronograma/",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
