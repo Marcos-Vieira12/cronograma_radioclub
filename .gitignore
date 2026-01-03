@@ -1,2 +1,31 @@
-git
+# Ambientes virtuais
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Arquivos de ambiente
 .env
+*.env
+Backend/.env
+# IDEs / SO
+.idea/
+.vscode/
+.DS_Store
+
+# Logs / temporários
+*.log
+
