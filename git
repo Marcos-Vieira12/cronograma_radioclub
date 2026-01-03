@@ -1,0 +1,13 @@
+#!/bin/bash
+# Script para automatizar commit e push na branch main
+
+if [ -z "$1" ]; then
+  echo "Uso: ./git \"mensagem do commit\""
+  exit 1
+fi
+
+git add .
+git commit -m "$1"
+git branch -M main
+git push origin main
+

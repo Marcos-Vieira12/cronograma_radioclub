@@ -109,6 +109,7 @@ def gerar_cronograma(
             if total_semana >= limite_90:
                 break
 
+            # Regras de encaixe
             if total_semana < tempo_min_semana:
                 def cabe(a):
                     return a["duration_min"] + total_semana <= tempo_max_semana
@@ -127,7 +128,11 @@ def gerar_cronograma(
             total_semana += candidato["duration_min"]
             aulas_ordenadas.remove(candidato)
 
-    return cronograma
+    # Tudo que sobrou vira aulas restantes
+    aulas_restantes = aulas_ordenadas
+
+    return cronograma, aulas_restantes
+
 
 def gerar_pdf_bytes(cronograma: List[List[Dict[str, Any]]]) -> BytesIO:
     miolo_buf = BytesIO()

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import type { formQuestion } from "../types/types";
 import Select from "react-select";
-import { AlignCenter } from "lucide-react";
 
 
 interface IInputProps {

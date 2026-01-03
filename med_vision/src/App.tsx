@@ -1,24 +1,18 @@
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import './App.css';
+import './styles/App.css';
 import logo from './assets/Logo.png';
 import mascoteImg from './assets/Mascote.png';
-
-interface Cronograma {
-  id: string;
-  name: string;
-  email: string;
-  nivel: string;
-  respostas: any;
-  cronograma: any;
-  status: boolean; // true = enviado / false = pendente
-  modifier: string;
-}
+import { Modal } from "./Modal";
+import type { Cronograma } from "./types";
+import imgDuvida from './assets/imgDuvida.png';
 
 function App() {
   const [todosCronogramas, setTodosCronogramas] = useState<Cronograma[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [selectedCronograma, setSelectedCronograma] = useState<Cronograma | null>(null);
+  const [showModal, setShowModal] = useState(false);
 
   // 🔹 Busca TODOS os cronogramas apenas uma vez
   async function carregarTodos() {
@@ -26,7 +20,7 @@ function App() {
       setLoading(true);
       setError("");
 
-      const response = await fetch("http://127.0.0.1:8000/cronograma/getall", {
+      const response = await fetch("https://cronograma-radioclub.onrender.com/cronograma/getall", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
@@ -52,11 +46,74 @@ function App() {
   const cronogramasEnviados = todosCronogramas.filter(c => c.status);
 
   // 🔹 Função de envio (mantida)
+
+
+  function handleModal(c: Cronograma) {
+    setSelectedCronograma(c);
+    setShowModal(true);
+  }
+
+  async function handleExcluir(id: string) {
+  const confirm = await Swal.fire({
+    text: `tem certeza que deseja excluir esse cronograma?`,
+    imageUrl: imgDuvida,
+    imageWidth: 220,
+    imageHeight: "auto",
+    imageAlt: "Ícone de dúvida",
+    showCancelButton: true,
+    confirmButtonText: "Sim, Excluir",
+    cancelButtonText: "Cancelar",
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#3085d6",
+  });
+
+  if (!confirm.isConfirmed) return;
+
+  Swal.fire({
+    title: "Excluindo cronograma...",
+    text: "Por favor, aguarde.",
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    didOpen: () => Swal.showLoading(),
+  });
+
+  try {
+    const response = await fetch(`http://127.0.0.1:8000/cronograma/remove?id=${id}`, {
+      method: "POST",
+    });
+
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.detail || "Erro ao excluir cronograma");
+
+    Swal.fire({
+      icon: "success",
+      title: "Cronograma removido!",
+      text: "Cronograma removido com sucesso.",
+      confirmButtonColor: "#3085d6",
+    });
+
+    // remove de todas as listas derivadas
+    setTodosCronogramas(prev => prev.filter(c => c.id !== id));
+    setShowModal(false);
+
+  } catch (error: any) {
+    Swal.fire({
+      icon: "error",
+      title: "Erro ao enviar",
+      text: error.message || "Não foi possível enviar o cronograma.",
+      confirmButtonColor: "#d33",
+    });
+  }
+}
+
   async function handleEnviar(id: string, email: string) {
     const confirm = await Swal.fire({
-      title: "Enviar cronograma?",
-      text: `Deseja enviar o cronograma para ${email}?`,
-      icon: "question",
+      title: "Enviar cronograma",
+      text: `para ${email}?`,
+      imageUrl: imgDuvida,
+      imageWidth: 220,
+      imageHeight: "auto",
+      imageAlt: "Ícone de dúvida",
       showCancelButton: true,
       confirmButtonText: "Sim, enviar",
       cancelButtonText: "Cancelar",
@@ -74,8 +131,8 @@ function App() {
       didOpen: () => Swal.showLoading(),
     });
 
-    try {
-      const response = await fetch(`http://127.0.0.1:8000/cronograma/email?id=${id}`, {
+      try {
+      const response = await fetch(`https://cronograma-radioclub.onrender.com/cronograma/email?id=${id}`, {
         method: "POST",
       });
 
@@ -93,6 +150,7 @@ function App() {
       setTodosCronogramas(prev =>
         prev.map(c => (c.id === id ? { ...c, status: true } : c))
       );
+      setShowModal(false);
 
     } catch (error: any) {
       Swal.fire({
@@ -109,7 +167,12 @@ function App() {
 
   return (
     <div className="App">
-
+        <Modal
+          open={showModal}
+          onClose={() => setShowModal(false)}
+          data={selectedCronograma ? { c: selectedCronograma } : null}
+          onSend={handleEnviar}
+        />
       <div className="Top">
         <img src={logo} alt="Logo" />
         <h2>Central dos cronogramas dos alunos</h2>
@@ -122,16 +185,32 @@ function App() {
             <div
               key={c.id}
               className="Card"
-              onClick={() => handleEnviar(c.id, c.email)}
             >
               <h3>{c.name}</h3>
               <p className="Email">{c.email}</p>
               <p className="Nivel">
                 <b>Nível:</b> {c.nivel}
               </p>
-              <p className={c.status ? "Status Enviado" : "Status Pendente"}>
-                {c.status ? "Enviado" : "Aberto"} : {new Date(c.modifier).toLocaleDateString("pt-BR")}
+              <div className="StatusRow">
+              <p className="StatusDate">
+                {c.status ? "Enviado" : "Aberto"}: {new Date(c.modifier).toLocaleDateString("pt-BR")}
               </p>
+
+              <div className="CardButtons">
+                <button
+                  className={`Btn ${c.status ? "Enviado" : "Editar"}`}
+                  disabled={c.status}
+                  onClick={() => handleModal(c)}
+                >
+                  {c.status ? "Enviado" : "Editar"}
+                </button>
+
+                <button className="Btn Excluir" onClick={() => handleExcluir(c.id)}>
+                  Excluir
+                </button>
+              </div>
+            </div>
+
             </div>
           ))}
         </div>
@@ -144,16 +223,31 @@ function App() {
             <div
               key={c.id}
               className="Card"
-              onClick={() => handleEnviar(c.id, c.email)}
             >
               <h3>{c.name}</h3>
               <p className="Email">{c.email}</p>
               <p className="Nivel">
                 <b>Nível:</b> {c.nivel}
               </p>
-              <p className={c.status ? "Status Enviado" : "Status Pendente"}>
-                {c.status ? "Enviado" : "aberto"} : {new Date(c.modifier).toLocaleDateString("pt-BR")}
+              <div className="StatusRow">
+              <p className="StatusDate">
+                {c.status ? "Enviado" : "Aberto"}: {new Date(c.modifier).toLocaleDateString("pt-BR")}
               </p>
+
+              <div className="CardButtons">
+                <button
+                  className={`Btn ${c.status ? "Enviado" : "Editar"}`}
+                  disabled={c.status}
+                >
+                  {c.status ? "Enviado" : "Editar"}
+                </button>
+
+                <button className="Btn Excluir" onClick={() => handleExcluir(c.id)}>
+                  Excluir
+                </button>
+              </div>
+            </div>
+
             </div>
           ))}
         </div>

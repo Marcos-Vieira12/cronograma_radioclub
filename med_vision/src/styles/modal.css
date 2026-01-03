@@ -1,0 +1,513 @@
+/* Fundo escuro atrás do modal */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+}
+
+/* Caixa do modal */
+.modalBox {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;        /* filhos ocupam largura toda */
+  width: 80vw;
+  max-width: 1100px;
+  height: 100vh;                /* altura fixa para habilitar scroll interno */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Topo com título e botões */
+.top {
+  width: 100%;
+  height: 70px;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    #3a5ef6 0%,
+    #3657e3 24.97%,
+    #3555dd 41.51%,
+    #2d4ac2 70.7%,
+    #2741ab 100%
+  );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.top-left {
+  display: flex;
+  height: 100%;
+  width: auto;
+  flex-direction: row;
+  align-items: center;
+  min-width: 0;
+  gap: 30px;
+}
+
+.top-left img {
+  height: 99%;
+  width: auto;
+  object-fit: contain; /* mantém qualidade */
+}
+
+.top-left h2 {
+  white-space: nowrap;            /* nunca quebra linha */
+  font-size: clamp(0.8vw, 2.4vw, 3vw);
+  overflow: hidden;               /* evita estourar */
+  text-overflow: ellipsis;        /* ... se realmente ultrapassar */
+  max-width: 100%;                /* garante limite */
+}
+
+.top-right {
+  display: flex;
+  height: 100%;
+  width: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  gap: 10px;
+}
+
+.top-right button {
+  border: none;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.top-right button:hover {
+  opacity: 0.9;
+  box-shadow: none;
+}
+
+/* Corpo principal do modal: 2 colunas */
+.modal-body {
+  width: 100%;
+  flex: 1;                       /* ocupa o espaço abaixo do topo */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;          /* colunas com mesma altura */
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  overflow: hidden;              /* scroll fica nas colunas, não aqui */
+}
+
+/* Coluna de aulas disponíveis */
+.available-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 28%;
+  height: 100%;                  /* mesma altura da coluna de semanas */
+  box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 8px 0;
+}
+
+.available-list h2 {
+  color: #375aeb;
+  font-size: clamp(0.8vw, 2vw, 3vw);
+}
+
+/* Campo de busca */
+.search-field {
+  height: 30px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.search-field img {
+  height: 50%;
+  width: auto;
+}
+
+.search-field input {
+  width: 100%;
+  color: #4c4c4c;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #7c7c7c;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: clamp(12px, 1.2vw, 2vw);
+}
+
+.search-field input:focus {
+  border-bottom: 1px solid #375aeb;
+}
+
+/* Lista de filtros ativos (chips) */
+.filter-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;      /* impede quebrar linha */
+  white-space: nowrap;    /* impede quebra dentro dos filtros */
+  gap: 6px;
+  width: 100%;
+  height: 4vh;
+  overflow-x: auto;       /* adiciona scroll horizontal se necessário */
+  padding-bottom: 4px;    /* espaço pro scroll */
+}
+
+.filter-list::-webkit-scrollbar {
+  height: 3px;            /* scrollbar horizontal */
+}
+.filter-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+.filter-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+.filter-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.filter {
+  background-color: rgba(47, 83, 234, 0.96);
+  color: white;
+  border-radius: 30px;
+  padding: 4px 12px;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;    /* evita quebrar dentro da tag */
+}
+
+.filter p {
+  font-size: clamp(8px, 0.8vw, 1.6vw);
+  padding: 6px 12px;
+  margin: 0;
+}
+
+/* Lista de aulas restantes */
+.lesson-list {
+  width: 100%;
+  flex: 1;                       /* ocupa o espaço vertical da coluna */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.lesson-list span {
+  white-space: nowrap;
+}
+
+.lesson-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lesson-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.lesson-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.lesson-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.lessons {
+  width: 90%;
+  background-color: #f0f0f0;
+  color: black;
+  min-width: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.25);
+  border: 1px solid #adbbf5;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+
+.lesson-module {
+  flex: 1;                 /* pega o que sobrar */
+  min-width: 0;
+  border-right: 1px solid #adbbf5;
+}
+/* esquerda: ocupa todo o espaço livre */
+.lesson-title {
+  flex: 1;                 /* pega o que sobrar */
+  min-width: 0;
+  border-right: 1px solid #adbbf5;
+}
+
+.lesson-title p, .lesson-module p {
+  font-size: clamp(9px, 0.9vw, 1.8vw);
+  padding: 8px 12px;
+  margin: 0;
+}
+
+/* direita: largura fixa, igual em todas as aulas */
+.lesson-duration {
+  flex: 0 0 20px;          /* 90px fixos; ajuste se quiser mais/menos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.lesson-duration span {
+  font-size: clamp(10px, 1vw, 2vw);
+  white-space: nowrap;     /* evita quebrar "20 min" em duas linhas */
+}
+
+.lessons:hover {
+  background-color: #e0e0e0;
+  box-shadow: none;
+}
+
+
+/* ======================
+   Popover de filtro
+====================== */
+.popover-content {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;               /* menos espaçamento geral */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  min-width: 230px;
+  z-index: 10000;
+}
+
+.popover-arrow {
+  fill: white;
+}
+
+/* Layout principal do popover */
+.filtro-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;                 /* menos espaço entre itens */
+}
+
+.filtro-container h3 {
+  margin: 4px 0;           /* diminui o espaço acima/abaixo */
+  font-size: 14px;
+  color: #375aeb;
+}
+
+/* Checkboxes */
+.filtro-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* Inputs gerais do filtro */
+.filtro-container input,
+.filtro-container select {
+  background: white;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 28px;            /* altura mais elegante */
+  font-size: 13px;
+  padding: 2px 6px;
+  box-sizing: border-box;
+}
+
+/* Campo do tempo */
+.filtro-tempo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filtro-tempo select {
+  width: 120px;
+}
+
+.filtro-tempo input {
+  width: 55px;
+  text-align: center;
+}
+
+/* Botão aplicar */
+.btn-aplicar {
+  margin-top: 6px;
+  padding: 6px 8px;
+  background: #375aeb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  width: 100%;              /* botão full width */
+}
+
+.btn-aplicar:hover {
+  opacity: 0.9;
+}
+
+/* Botão limpar filtros */
+.btn-limpar {
+  margin-top: 6px;
+  padding: 6px 8px;
+  background: #e8e8e8;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  width: 100%;              /* botão full width */
+}
+
+.btn-limpar:hover {
+  opacity: 0.9;
+}
+
+/* Chrome, Safari, Edge, Opera – remove setas do number */
+.filtro-tempo input[type="number"]::-webkit-inner-spin-button,
+.filtro-tempo input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox – remove setas do number */
+.filtro-tempo input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+/* ======================
+   Coluna das semanas
+====================== */
+.weeks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  flex: 1;                     /* ocupa o resto do espaço horizontal */
+  height: 100%;                /* mesma altura da coluna de aulas */
+  overflow-y: auto;
+  background-color: #e8e8ef;
+  align-items: center;
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+
+.weeks-list::-webkit-scrollbar {
+  width: 8px;
+}
+.weeks-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+.weeks-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+.weeks-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.week {
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.week-top {
+  background: linear-gradient(90deg, #2c56ff 0%, #2c56ff 38.94%, #1d41d3 69.47%);
+  color: white;
+  height: 56px;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.week-body {
+  background-color: #f4f4f9;
+  width: 100%;
+  min-height: 210px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.week-pair {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.week-lesson {
+  background-color: #f0f0f0;
+  border: 1px solid #adbbf5;
+  width: 270px;
+  height: 51px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.25);
+}
+.week-lesson:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.week-lesson p {
+  margin: 0;
+  font-size: 13px;
+}

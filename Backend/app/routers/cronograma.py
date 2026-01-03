@@ -11,7 +11,10 @@ from core import send_email_with_pdf
 from dotenv import load_dotenv
 load_dotenv()
 from sqlalchemy import create_engine, text
-engine = create_engine(os.getenv("DB_URL"))
+engine = create_engine(os.getenv("DB_URL"),    
+    pool_pre_ping=True,   # 👈 ESSENCIAL
+    pool_size=5,
+    max_overflow=10)
 
 router = APIRouter(prefix="/cronograma", tags=["cronograma"])
 
@@ -151,4 +154,51 @@ def getall():
         "data": cronogramas
     }
 
-    
+@router.post("/remove")
+def remove_cronograma(id: str):
+    try:
+        with engine.begin() as conn:
+            # 1️⃣ Faz backup antes de remover
+            backup_query = text("""
+                INSERT INTO backup (
+                    id,
+                    email,
+                    nivel,
+                    respostas,
+                    cronograma,
+                    status,
+                    name,
+                    modifier
+                )
+                SELECT
+                    id,
+                    email,
+                    nivel,
+                    respostas,
+                    cronograma,
+                    status,
+                    name,
+                    modifier
+                FROM cronogramas
+                WHERE id = :id
+            """)
+            backup_result = conn.execute(backup_query, {"id": id})
+
+            if backup_result.rowcount == 0:
+                raise HTTPException(status_code=404, detail="Cronograma não encontrado")
+
+            # 2️⃣ Remove da tabela principal
+            delete_query = text("""
+                DELETE FROM cronogramas
+                WHERE id = :id
+            """)
+            conn.execute(delete_query, {"id": id})
+
+        return {
+            "status": "success",
+            "message": "Cronograma removido com sucesso (backup realizado)."
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))

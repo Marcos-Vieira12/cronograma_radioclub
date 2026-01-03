@@ -170,14 +170,14 @@ const handleAdd = (id: string, value: any) => {
   return (
     <form className="form" noValidate onSubmit={(e) => { e.preventDefault(); handlerNext(); }}>
     {formQuestions.map((q) => (
-      <>
+      
         <Input 
           key={q.id}
           question={q}
           error = {errors[q.id]}
           onAdd={(value) => handleAdd(q.id, value)}
         />
-      </>
+      
     ))}
 
 

@@ -82,24 +82,30 @@ export default function App() {
     setStep(PREV_STATE[part]);
   };
 
-  const handleUpload = async (formData: any[]) => {
-  // 🔹 Passo 1: Extrair respostas de todas as partes
+const handleUpload = async (part: string, data: any[]) => {
+  // 🔹 1) Atualiza o formData **localmente** e no estado
+  const updatedFormData = (() => {
+    const filtered = formData.filter((p: any) => p.part !== part);
+    return [...filtered, { part: part as Step, data }];
+  })();
+
+  setFormData(updatedFormData);
+
+  // 🔹 2) Extrair respostas de todas as partes a partir de updatedFormData
   const respostas: Record<string, any> = {};
 
-  formData.forEach((part: any) => {
-    if (!Array.isArray(part.data)) return; // evita erro se part.data for undefined
+  updatedFormData.forEach((part: any) => {
+    if (!Array.isArray(part.data)) return;
     part.data.forEach((q: any) => {
-      // Ignora email e nível na lista de respostas
       if (q.id === "email" || q.id === "level" || q.id === "name") return;
-
       if (q.answer !== undefined && q.answer !== null && q.answer !== "") {
         respostas[q.question] = q.answer;
       }
     });
   });
 
-  // 🔹 Passo 2: Extrair email e nível (tratando partes sem .data)
-  const allQuestions = formData.flatMap((p: any) =>
+  // 🔹 3) Extrair email, nível e nome
+  const allQuestions = updatedFormData.flatMap((p: any) =>
     Array.isArray(p.data) ? p.data : []
   );
 
@@ -110,8 +116,7 @@ export default function App() {
   const name =
     allQuestions.find((q: any) => q.id === "name")?.answer || "";
 
-
-  // 🔹 Passo 4: Montar o JSON no formato do backend
+  // 🔹 4) Montar JSON
   const formatted = {
     name,
     nivel,
@@ -119,7 +124,7 @@ export default function App() {
     respostas,
   };
 
-  // 🔹 Passo 5: Mostrar Swal de carregamento
+  // 🔹 5) Swal de carregamento
   Swal.fire({
     title: "Gerando seu cronograma...",
     text: "Por favor, aguarde enquanto salvamos seus dados.",
@@ -128,11 +133,11 @@ export default function App() {
     didOpen: () => Swal.showLoading(),
   });
 
+  console.log(JSON.stringify(formatted));
 
-  console.log(JSON.stringify(formatted))
   try {
     const response = await fetch(
-      "http://127.0.0.1:8000/cronograma/",
+      "https://cronograma-radioclub.onrender.com/cronograma/",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -140,15 +145,17 @@ export default function App() {
       }
     );
 
-    const data = await response.json();
+    const dataResp = await response.json();
 
     if (!response.ok) {
-      throw new Error(data.error || "Erro ao salvar cronograma");
+      throw new Error(dataResp.error || "Erro ao salvar cronograma");
     }
 
     Swal.fire({
       icon: "success",
-      title: data.message || "SHOW! agora nosso time de especialistas vai criar o seu cronograma e em breve te enviaremos por email 😁",
+      title:
+        dataResp.message ||
+        "SHOW! agora nosso time de especialistas vai criar o seu cronograma e em breve te enviaremos por email 😁",
       confirmButtonText: "OK",
       confirmButtonColor: "#3085d6",
       allowOutsideClick: false,
@@ -165,6 +172,7 @@ export default function App() {
     });
   }
 };
+
 
   // ======= Conditional Rendering =======
 
@@ -204,7 +212,7 @@ export default function App() {
       {/* === Part 3 === */}
       {step === "part3" && (
         <Part3
-          onNext={(data) => handleUpload(formData)}
+          onNext={(data) => handleUpload("part3", data)}
           onPrev={() => handlePrev("part3")}
           InitialData={formData.find(p => p.part === "part3")?.data}
         />

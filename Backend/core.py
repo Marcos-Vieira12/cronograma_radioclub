@@ -28,7 +28,6 @@ def run_cronograma(form_json: Dict[str, Any]) -> Dict[str, Any]:
     if not email or not nivel:
         raise ValueError("Campos obrigatórios: email, nivel")
 
-
     catalogo = carregar_catalogo()
 
     metricas = copy.deepcopy(METRICAS)
@@ -46,6 +45,7 @@ def run_cronograma(form_json: Dict[str, Any]) -> Dict[str, Any]:
     pesos = calcular_pesos_aulas(catalogo, metricas)
 
     numero_semanas = int(metricas.get("semanas") or respostas.get("numero_semanas") or 12)
+
     mapa_carga = {
         "Até 1h": (30, 60),
         "1h a 2h": (60, 120),
@@ -53,34 +53,61 @@ def run_cronograma(form_json: Dict[str, Any]) -> Dict[str, Any]:
         "3h a 4h": (120, 240),
         "Mais de 4h": (240, 360),
     }
-    carga_txt = respostas.get("Quanto tempo, por semana, você consegue dedicar aos estudos com o RadioClub?")
+
+    carga_txt = respostas.get(
+        "Quanto tempo, por semana, você consegue dedicar aos estudos com o RadioClub?"
+    )
     tempo_min, tempo_max = mapa_carga.get(carga_txt, (90, 180))
 
-    semanas = gerar_cronograma(pesos, tempo_max, numero_semanas, tempo_min)
+    semanas, restantes = gerar_cronograma(
+        pesos, tempo_max, numero_semanas, tempo_min
+    )
 
-    itens = []
-    minutos_por_semana = []
-    total = 0
-    for i, semana in enumerate(semanas, start=1):
-        soma = sum(a["duration_min"] for a in semana)
-        minutos_por_semana.append(soma)
-        total += soma
-        for aula in semana:
-            itens.append({
-                "semana": i,
+    # Construção do formato FINAL para o front
+    weeks_output = []
+
+    for idx, semana in enumerate(semanas, start=1):
+        weeks_output.append({
+            "week": idx,
+            "lessons": [
+                {
+                    "module_name": aula["module_name"],
+                    "lesson_theme": aula["lesson_theme"],
+                    "duration_min": aula["duration_min"],
+                    "peso": aula["peso"]
+                }
+                for aula in semana
+            ]
+        })
+
+    # Última semana = aulas restantes
+    weeks_output.append({
+        "week": "remaining",
+        "lessons": [
+            {
                 "module_name": aula["module_name"],
                 "lesson_theme": aula["lesson_theme"],
                 "duration_min": aula["duration_min"],
-            })
+                "peso": aula["peso"]
+            }
+            for aula in restantes
+        ]
+    })
+
+    # Resumo
+    minutos_por_semana = [sum(a["duration_min"] for a in w) for w in semanas]
+    total = sum(minutos_por_semana)
 
     return {
-        "semanas": numero_semanas,
-        "itens": itens,
-        "resumo": {
-            "total_minutos": total,
-            "minutos_por_semana": minutos_por_semana,
+        "weeks": weeks_output,
+        "summary": {
+            "total_minutes": total,
+            "minutes_per_week": minutos_por_semana
         },
-        "params": {"tempo_min_semana": tempo_min, "tempo_max_semana": tempo_max},
+        "params": {
+            "tempo_min_semana": tempo_min,
+            "tempo_max_semana": tempo_max
+        }
     }
 
 def run_pdf(cronograma_json: Dict[str, Any]) -> BytesIO:
