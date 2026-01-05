@@ -1,11 +1,15 @@
+// src/App.tsx
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import './styles/App.css';
-import logo from './assets/Logo.png';
-import mascoteImg from './assets/Mascote.png';
+import "./styles/App.css";
+import logo from "./assets/Logo.png";
+import mascoteImg from "./assets/Mascote.png";
 import { Modal } from "./Modal";
 import type { Cronograma } from "./types";
-import imgDuvida from './assets/imgDuvida.png';
+import imgDuvida from "./assets/imgDuvida.png";
+
+import { apiFetch, getToken, clearToken } from "./apiFetch";
+import { Login } from "./Login";
 
 function App() {
   const [todosCronogramas, setTodosCronogramas] = useState<Cronograma[]>([]);
@@ -14,22 +18,34 @@ function App() {
   const [selectedCronograma, setSelectedCronograma] = useState<Cronograma | null>(null);
   const [showModal, setShowModal] = useState(false);
 
-  // 🔹 Busca TODOS os cronogramas apenas uma vez
+  // ✅ Gate de autenticação (sem router)
+  const [isAuthed, setIsAuthed] = useState<boolean>(() => !!getToken());
+
+  function handleUnauthorized() {
+    // volta pro login
+    setIsAuthed(false);
+    setTodosCronogramas([]);
+    setShowModal(false);
+    setLoading(false);
+    setError("");
+  }
+
   async function carregarTodos() {
     try {
       setLoading(true);
       setError("");
 
-      const response = await fetch("https://cronograma-radioclub.onrender.com/cronograma/getall", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-      });
-
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.detail || "Erro ao buscar cronogramas");
+      const data = await apiFetch(
+        "/cronograma/getall",
+        { method: "POST" },
+        handleUnauthorized
+      );
 
       setTodosCronogramas(data.data);
     } catch (err: any) {
+      // se foi 401, handleUnauthorized já cuidou
+      if (err?.status === 401 || err?.message === "Not authenticated") return;
+
       setError(err.message);
       setTodosCronogramas([]);
     } finally {
@@ -38,15 +54,11 @@ function App() {
   }
 
   useEffect(() => {
-    carregarTodos();
-  }, []);
+    if (isAuthed) carregarTodos();
+  }, [isAuthed]);
 
-  // 🔹 Agora você tem duas listas SEPARADAS:
-  const cronogramasPendentes = todosCronogramas.filter(c => !c.status);
-  const cronogramasEnviados = todosCronogramas.filter(c => c.status);
-
-  // 🔹 Função de envio (mantida)
-
+  const cronogramasPendentes = todosCronogramas.filter((c) => !c.status);
+  const cronogramasEnviados = todosCronogramas.filter((c) => c.status);
 
   function handleModal(c: Cronograma) {
     setSelectedCronograma(c);
@@ -54,57 +66,56 @@ function App() {
   }
 
   async function handleExcluir(id: string) {
-  const confirm = await Swal.fire({
-    text: `tem certeza que deseja excluir esse cronograma?`,
-    imageUrl: imgDuvida,
-    imageWidth: 220,
-    imageHeight: "auto",
-    imageAlt: "Ícone de dúvida",
-    showCancelButton: true,
-    confirmButtonText: "Sim, Excluir",
-    cancelButtonText: "Cancelar",
-    confirmButtonColor: "#d33",
-    cancelButtonColor: "#3085d6",
-  });
-
-  if (!confirm.isConfirmed) return;
-
-  Swal.fire({
-    title: "Excluindo cronograma...",
-    text: "Por favor, aguarde.",
-    allowOutsideClick: false,
-    allowEscapeKey: false,
-    didOpen: () => Swal.showLoading(),
-  });
-
-  try {
-    const response = await fetch(`http://127.0.0.1:8000/cronograma/remove?id=${id}`, {
-      method: "POST",
-    });
-
-    const data = await response.json();
-    if (!response.ok) throw new Error(data.detail || "Erro ao excluir cronograma");
-
-    Swal.fire({
-      icon: "success",
-      title: "Cronograma removido!",
-      text: "Cronograma removido com sucesso.",
-      confirmButtonColor: "#3085d6",
-    });
-
-    // remove de todas as listas derivadas
-    setTodosCronogramas(prev => prev.filter(c => c.id !== id));
-    setShowModal(false);
-
-  } catch (error: any) {
-    Swal.fire({
-      icon: "error",
-      title: "Erro ao enviar",
-      text: error.message || "Não foi possível enviar o cronograma.",
+    const confirm = await Swal.fire({
+      text: `tem certeza que deseja excluir esse cronograma?`,
+      imageUrl: imgDuvida,
+      imageWidth: 220,
+      imageHeight: "auto",
+      imageAlt: "Ícone de dúvida",
+      showCancelButton: true,
+      confirmButtonText: "Sim, Excluir",
+      cancelButtonText: "Cancelar",
       confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
     });
+
+    if (!confirm.isConfirmed) return;
+
+    Swal.fire({
+      title: "Excluindo cronograma...",
+      text: "Por favor, aguarde.",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      didOpen: () => Swal.showLoading(),
+    });
+
+    try {
+      await apiFetch(
+        `/cronograma/remove?id=${encodeURIComponent(id)}`,
+        { method: "POST" },
+        handleUnauthorized
+      );
+
+      Swal.fire({
+        icon: "success",
+        title: "Cronograma removido!",
+        text: "Cronograma removido com sucesso.",
+        confirmButtonColor: "#3085d6",
+      });
+
+      setTodosCronogramas((prev) => prev.filter((c) => c.id !== id));
+      setShowModal(false);
+    } catch (error: any) {
+      if (error?.status === 401 || error?.message === "Not authenticated") return;
+
+      Swal.fire({
+        icon: "error",
+        title: "Erro ao excluir",
+        text: error.message || "Não foi possível excluir o cronograma.",
+        confirmButtonColor: "#d33",
+      });
+    }
   }
-}
 
   async function handleEnviar(id: string, email: string) {
     const confirm = await Swal.fire({
@@ -131,13 +142,12 @@ function App() {
       didOpen: () => Swal.showLoading(),
     });
 
-      try {
-      const response = await fetch(`https://cronograma-radioclub.onrender.com/cronograma/email?id=${id}`, {
-        method: "POST",
-      });
-
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.detail || "Erro ao enviar cronograma");
+    try {
+      const data = await apiFetch(
+        `/cronograma/email?id=${encodeURIComponent(id)}`,
+        { method: "POST" },
+        handleUnauthorized
+      );
 
       Swal.fire({
         icon: "success",
@@ -146,13 +156,11 @@ function App() {
         confirmButtonColor: "#3085d6",
       });
 
-      // Atualiza status localmente
-      setTodosCronogramas(prev =>
-        prev.map(c => (c.id === id ? { ...c, status: true } : c))
-      );
+      setTodosCronogramas((prev) => prev.map((c) => (c.id === id ? { ...c, status: true } : c)));
       setShowModal(false);
-
     } catch (error: any) {
+      if (error?.status === 401 || error?.message === "Not authenticated") return;
+
       Swal.fire({
         icon: "error",
         title: "Erro ao enviar",
@@ -162,92 +170,103 @@ function App() {
     }
   }
 
+  // ✅ Se não está logado, mostra a tela de login
+  if (!isAuthed) {
+    return (
+      <Login
+        onLoggedIn={() => {
+          setIsAuthed(true);
+        }}
+      />
+    );
+  }
+
+  // opcional: botão de sair (logout local)
+  async function handleLogout() {
+    clearToken();
+    setIsAuthed(false);
+  }
+
   if (loading) return <p style={{ padding: 20 }}>Carregando...</p>;
   if (error) return <p style={{ padding: 20 }}>Erro: {error}</p>;
 
   return (
     <div className="App">
-        <Modal
-          open={showModal}
-          onClose={() => setShowModal(false)}
-          data={selectedCronograma ? { c: selectedCronograma } : null}
-          onSend={handleEnviar}
-        />
+      <Modal
+        open={showModal}
+        onClose={() => setShowModal(false)}
+        data={selectedCronograma ? { c: selectedCronograma } : null}
+        onSend={handleEnviar}
+      />
+
       <div className="Top">
         <img src={logo} alt="Logo" />
         <h2>Central dos cronogramas dos alunos</h2>
+
+        <button onClick={handleLogout} style={{ marginLeft: "auto" }}>
+          Sair
+        </button>
       </div>
 
       <div className="List">
         <p>Cronogramas Abertos</p>
         <div className="CardsWrapper">
           {cronogramasPendentes.map((c) => (
-            <div
-              key={c.id}
-              className="Card"
-            >
+            <div key={c.id} className="Card">
               <h3>{c.name}</h3>
               <p className="Email">{c.email}</p>
               <p className="Nivel">
                 <b>Nível:</b> {c.nivel}
               </p>
+
               <div className="StatusRow">
-              <p className="StatusDate">
-                {c.status ? "Enviado" : "Aberto"}: {new Date(c.modifier).toLocaleDateString("pt-BR")}
-              </p>
+                <p className="StatusDate">
+                  {c.status ? "Enviado" : "Aberto"}: {new Date(c.modifier).toLocaleDateString("pt-BR")}
+                </p>
 
-              <div className="CardButtons">
-                <button
-                  className={`Btn ${c.status ? "Enviado" : "Editar"}`}
-                  disabled={c.status}
-                  onClick={() => handleModal(c)}
-                >
-                  {c.status ? "Enviado" : "Editar"}
-                </button>
+                <div className="CardButtons">
+                  <button
+                    className={`Btn ${c.status ? "Enviado" : "Editar"}`}
+                    disabled={c.status}
+                    onClick={() => handleModal(c)}
+                  >
+                    {c.status ? "Enviado" : "Editar"}
+                  </button>
 
-                <button className="Btn Excluir" onClick={() => handleExcluir(c.id)}>
-                  Excluir
-                </button>
+                  <button className="Btn Excluir" onClick={() => handleExcluir(c.id)}>
+                    Excluir
+                  </button>
+                </div>
               </div>
-            </div>
-
             </div>
           ))}
         </div>
 
-
         <p>Cronogramas Enviados</p>
-
         <div className="CardsWrapper">
           {cronogramasEnviados.map((c) => (
-            <div
-              key={c.id}
-              className="Card"
-            >
+            <div key={c.id} className="Card">
               <h3>{c.name}</h3>
               <p className="Email">{c.email}</p>
               <p className="Nivel">
                 <b>Nível:</b> {c.nivel}
               </p>
+
               <div className="StatusRow">
-              <p className="StatusDate">
-                {c.status ? "Enviado" : "Aberto"}: {new Date(c.modifier).toLocaleDateString("pt-BR")}
-              </p>
+                <p className="StatusDate">
+                  {c.status ? "Enviado" : "Aberto"}: {new Date(c.modifier).toLocaleDateString("pt-BR")}
+                </p>
 
-              <div className="CardButtons">
-                <button
-                  className={`Btn ${c.status ? "Enviado" : "Editar"}`}
-                  disabled={c.status}
-                >
-                  {c.status ? "Enviado" : "Editar"}
-                </button>
+                <div className="CardButtons">
+                  <button className={`Btn ${c.status ? "Enviado" : "Editar"}`} disabled={c.status}>
+                    {c.status ? "Enviado" : "Editar"}
+                  </button>
 
-                <button className="Btn Excluir" onClick={() => handleExcluir(c.id)}>
-                  Excluir
-                </button>
+                  <button className="Btn Excluir" onClick={() => handleExcluir(c.id)}>
+                    Excluir
+                  </button>
+                </div>
               </div>
-            </div>
-
             </div>
           ))}
         </div>
@@ -263,7 +282,7 @@ function App() {
           width: "20.5vw",
           height: "auto",
           zIndex: 1000,
-          pointerEvents: "none"
+          pointerEvents: "none",
         }}
       />
     </div>

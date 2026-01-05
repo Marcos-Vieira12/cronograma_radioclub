@@ -7,3 +7,6 @@ PyPDF2>=3.0.0
 gunicorn
 SQLAlchemy
 psycopg2-binary
+python-jose[cryptography]
+passlib[bcrypt]
+

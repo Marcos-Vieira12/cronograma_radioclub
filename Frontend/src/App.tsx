@@ -137,7 +137,7 @@ const handleUpload = async (part: string, data: any[]) => {
 
   try {
     const response = await fetch(
-      "https://cronograma-radioclub.onrender.com/cronograma/",
+      `${import.meta.env.VITE_API_BASE_URL}/cronograma/`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
