@@ -1,6 +1,6 @@
 # app/routers/cronograma.py
 import traceback
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends, Body
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from typing import Dict, Any, Optional
@@ -154,6 +154,59 @@ def getall(user=Depends(get_current_user)):
 
     return {"status": "success", "count": len(cronogramas), "data": cronogramas}
 
+
+@router.post("/update")
+def update_cronograma(
+    id: str,
+    cronograma_json: Dict[str, Any] = Body(...),
+    user=Depends(get_current_user),
+):
+    try:
+        # validação mínima (pra evitar salvar lixo)
+        if not isinstance(cronograma_json, dict) or "weeks" not in cronograma_json:
+            raise HTTPException(status_code=400, detail="Payload inválido: esperado um objeto com 'weeks'.")
+
+        # opcional: garantir que weeks é lista
+        if not isinstance(cronograma_json.get("weeks"), list):
+            raise HTTPException(status_code=400, detail="Payload inválido: 'weeks' precisa ser uma lista.")
+
+        cronograma_str = json.dumps(cronograma_json, ensure_ascii=False)
+
+        # tenta extrair um identificador do usuário (depende do seu get_current_user)
+        modifier = None
+        try:
+            if isinstance(user, dict):
+                modifier = user.get("email") or user.get("username") or user.get("name")
+            else:
+                modifier = getattr(user, "email", None) or getattr(user, "username", None) or getattr(user, "name", None)
+        except Exception:
+            modifier = None
+
+        with engine.begin() as conn:
+            query = text("""
+                UPDATE cronogramas
+                SET cronograma = :cronograma
+                {modifier_clause}
+                WHERE id = :id
+            """.format(
+                modifier_clause=", modifier = :modifier" if modifier else ""
+            ))
+
+            params = {"id": id, "cronograma": cronograma_str}
+            if modifier:
+                params["modifier"] = modifier
+
+            result = conn.execute(query, params)
+
+            if result.rowcount == 0:
+                raise HTTPException(status_code=404, detail="Cronograma não encontrado para atualizar.")
+
+        return {"status": "success", "message": "Cronograma atualizado com sucesso."}
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
 # 🔒 PROTEGIDA
 @router.post("/remove")
 def remove_cronograma(id: str, user=Depends(get_current_user)):

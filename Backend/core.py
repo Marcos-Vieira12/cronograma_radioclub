@@ -111,17 +111,26 @@ def run_cronograma(form_json: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 def run_pdf(cronograma_json: Dict[str, Any]) -> BytesIO:
-    n = cronograma_json.get("semanas", 0)
-    semanas = [[] for _ in range(n)]
-    for item in cronograma_json.get("itens", []):
-        semana_idx = item.get("semana", 0) - 1
-        if 0 <= semana_idx < n:
-            semanas[semana_idx].append({
-                "module_name": item.get("module_name"),
-                "lesson_theme": item.get("lesson_theme"),
-                "duration_min": item.get("duration_min"),
-            })
-    return gerar_pdf_bytes(semanas)
+    # ===== FORMATO NOVO (weeks) =====
+    if "weeks" in cronograma_json:
+        semanas = []
+
+        for w in cronograma_json.get("weeks", []):
+            # ignora remaining
+            if w.get("week") == "remaining":
+                continue
+
+            aulas = []
+            for a in w.get("lessons", []):
+                aulas.append({
+                    "module_name": a.get("module_name"),
+                    "lesson_theme": a.get("lesson_theme"),
+                    "duration_min": a.get("duration_min"),
+                })
+
+            semanas.append(aulas)
+
+        return gerar_pdf_bytes(semanas)
 
 def send_email_with_pdf(recipient_email: str, pdf_io: BytesIO):
     sender_email = os.getenv("EMAIL_SENDER")

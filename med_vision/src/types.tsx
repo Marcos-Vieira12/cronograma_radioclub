@@ -36,3 +36,6 @@ export interface CronogramaData {
   summary: CronogramaSummary;
   params: CronogramaParams;
 }
+
+
+export type AulaUI = Aula & { uid: string };

@@ -117,58 +117,74 @@ function App() {
     }
   }
 
-  async function handleEnviar(id: string, email: string) {
-    const confirm = await Swal.fire({
-      title: "Enviar cronograma",
-      text: `para ${email}?`,
-      imageUrl: imgDuvida,
-      imageWidth: 220,
-      imageHeight: "auto",
-      imageAlt: "Ícone de dúvida",
-      showCancelButton: true,
-      confirmButtonText: "Sim, enviar",
-      cancelButtonText: "Cancelar",
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-    });
+  async function handleEnviar(id: string, email: string, cronogramaAtualizado: any) {
+  const confirm = await Swal.fire({
+    title: "Enviar cronograma",
+    text: `para ${email}?`,
+    imageUrl: imgDuvida,
+    imageWidth: 220,
+    imageHeight: "auto",
+    imageAlt: "Ícone de dúvida",
+    showCancelButton: true,
+    confirmButtonText: "Sim, enviar",
+    cancelButtonText: "Cancelar",
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+  });
 
-    if (!confirm.isConfirmed) return;
+  if (!confirm.isConfirmed) return;
+
+  Swal.fire({
+    title: "Enviando cronograma...",
+    text: "Por favor, aguarde.",
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    didOpen: () => Swal.showLoading(),
+  });
+
+  try {
+    // 1) UPDATE (espera concluir)
+    await apiFetch(
+      `/cronograma/update?id=${encodeURIComponent(id)}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(cronogramaAtualizado),
+      },
+      handleUnauthorized
+    );
+
+    // 2) EMAIL (só depois do update)
+    const data = await apiFetch(
+      `/cronograma/email?id=${encodeURIComponent(id)}`,
+      { method: "POST" },
+      handleUnauthorized
+    );
 
     Swal.fire({
-      title: "Enviando cronograma...",
-      text: "Por favor, aguarde.",
-      allowOutsideClick: false,
-      allowEscapeKey: false,
-      didOpen: () => Swal.showLoading(),
+      icon: "success",
+      title: "Cronograma enviado!",
+      text: data.message || "Cronograma enviado com sucesso.",
+      confirmButtonColor: "#3085d6",
     });
 
-    try {
-      const data = await apiFetch(
-        `/cronograma/email?id=${encodeURIComponent(id)}`,
-        { method: "POST" },
-        handleUnauthorized
-      );
+    setTodosCronogramas((prev) =>
+      prev.map((c) => (c.id === id ? { ...c, status: true, cronograma: cronogramaAtualizado } : c))
+    );
 
-      Swal.fire({
-        icon: "success",
-        title: "Cronograma enviado!",
-        text: data.message || "Cronograma enviado com sucesso.",
-        confirmButtonColor: "#3085d6",
-      });
+    setShowModal(false);
+  } catch (error: any) {
+    if (error?.status === 401 || error?.message === "Not authenticated") return;
 
-      setTodosCronogramas((prev) => prev.map((c) => (c.id === id ? { ...c, status: true } : c)));
-      setShowModal(false);
-    } catch (error: any) {
-      if (error?.status === 401 || error?.message === "Not authenticated") return;
-
-      Swal.fire({
-        icon: "error",
-        title: "Erro ao enviar",
-        text: error.message || "Não foi possível enviar o cronograma.",
-        confirmButtonColor: "#d33",
-      });
-    }
+    Swal.fire({
+      icon: "error",
+      title: "Erro ao enviar",
+      text: error.message || "Não foi possível enviar o cronograma.",
+      confirmButtonColor: "#d33",
+    });
   }
+}
+
 
   // ✅ Se não está logado, mostra a tela de login
   if (!isAuthed) {
