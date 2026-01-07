@@ -97,7 +97,7 @@ export function Login({ onLoggedIn }: Props) {
         </button>
 
         <p style={{ margin: 0, fontSize: 12, opacity: 0.7 }}>
-          Se der “Not authenticated”, você volta pra essa tela automaticamente.
+          Se for o lucão, use com moderação
         </p>
       </form>
     </div>

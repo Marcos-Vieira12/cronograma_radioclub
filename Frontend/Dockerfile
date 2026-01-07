@@ -2,10 +2,10 @@
 FROM node:20 AS build
 WORKDIR /app
 
-COPY Frontend/package*.json ./
+COPY package*.json ./
 RUN npm install
 
-COPY Frontend ./
+COPY . .
 RUN npm run build
 
 # Servir com nginx
