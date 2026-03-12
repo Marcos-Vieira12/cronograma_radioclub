@@ -7,8 +7,8 @@ import os
 from typing import Dict, Any
 from io import BytesIO
 import copy
-from sendgrid import SendGrid
-from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
 import base64
 from lib import (
     carregar_catalogo,
@@ -147,22 +147,23 @@ def send_email_with_pdf(recipient_email: str, pdf_io: BytesIO):
         from_email=sender_email,
         to_emails=recipient_email,
         subject="Seu Cronograma RadioClub 📘",
-        plain_text_content="Olá!\n\nSegue em anexo o seu cronograma personalizado do RadioClub.\n\nBons estudos! 📚"
+        html_content="<html><body><p>Olá!</p><p>Segue em anexo o seu cronograma personalizado do RadioClub.</p><p>Bons estudos! 📚</p></body></html>"
     )
 
     # Anexa o PDF
     attachment = Attachment(
         FileContent(pdf_content),
         FileName("cronograma.pdf"),
-        file_type="application/pdf"
+        FileType("application/pdf"),
+        Disposition("attachment")
     )
     message.attachment = attachment
 
     # Envia via SendGrid
     try:
-        sg = SendGrid(sendgrid_api_key)
+        sg = SendGridAPIClient(sendgrid_api_key)
         response = sg.send(message)
         print(f"✅ E-mail enviado com sucesso para {recipient_email}")
     except Exception as e:
-        print("❌ Erro ao enviar e-mail:", e)
+        print(f"❌ Erro ao enviar e-mail para {recipient_email}: {str(e)}")
         raise

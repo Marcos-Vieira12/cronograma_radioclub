@@ -1,10 +1,10 @@
 FROM node:20 AS build
 WORKDIR /app
 
-COPY med_vision/package*.json ./
+COPY package*.json ./
 RUN npm install
 
-COPY med_vision ./
+COPY . .
 RUN npm run build
 
 FROM nginx:alpine

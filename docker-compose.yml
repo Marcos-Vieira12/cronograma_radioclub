@@ -4,8 +4,8 @@ services:
 
   backend:
     build:
-      context: .
-      dockerfile: Backend/Dockerfile
+      context: ./Backend
+      dockerfile: Dockerfile
     environment:
       - DB_URL=${DB_URL}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
@@ -20,8 +20,8 @@ services:
 
   frontend:
     build:
-      context: .
-      dockerfile: Frontend/Dockerfile
+      context: ./Frontend
+      dockerfile: Dockerfile
     ports:
       - "3000:80"
     depends_on:
@@ -30,8 +30,8 @@ services:
 
   med_vision:
     build:
-      context: .
-      dockerfile: med_vision/Dockerfile
+      context: ./med_vision
+      dockerfile: Dockerfile
     ports:
       - "3001:80"
     depends_on:
