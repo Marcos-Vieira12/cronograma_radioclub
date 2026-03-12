@@ -7,6 +7,9 @@ import os
 from typing import Dict, Any
 from io import BytesIO
 import copy
+from sendgrid import SendGrid
+from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName
+import base64
 from lib import (
     carregar_catalogo,
     calcular_pesos_aulas,
@@ -133,34 +136,32 @@ def run_pdf(cronograma_json: Dict[str, Any]) -> BytesIO:
         return gerar_pdf_bytes(semanas)
 
 def send_email_with_pdf(recipient_email: str, pdf_io: BytesIO):
+    sendgrid_api_key = os.getenv("SENDGRID_API_KEY")
     sender_email = os.getenv("EMAIL_SENDER")
-    sender_password = os.getenv("EMAIL_PASSWORD")
 
-    # Monta o e-mail
-    msg = MIMEMultipart()
-    msg["From"] = sender_email
-    msg["To"] = recipient_email
-    msg["Subject"] = "Seu Cronograma RadioClub 📘"
+    # Prepara o PDF como anexo
+    pdf_io.seek(0)
+    pdf_content = base64.b64encode(pdf_io.read()).decode()
 
-    # Corpo do e-mail
-    body = MIMEText(
-        "Olá!\n\nSegue em anexo o seu cronograma personalizado do RadioClub.\n\nBons estudos! 📚",
-        "plain",
-        "utf-8"
+    message = Mail(
+        from_email=sender_email,
+        to_emails=recipient_email,
+        subject="Seu Cronograma RadioClub 📘",
+        plain_text_content="Olá!\n\nSegue em anexo o seu cronograma personalizado do RadioClub.\n\nBons estudos! 📚"
     )
-    msg.attach(body)
 
     # Anexa o PDF
-    pdf_io.seek(0)
-    pdf_part = MIMEApplication(pdf_io.read(), _subtype="pdf")
-    pdf_part.add_header("Content-Disposition", "attachment", filename="cronograma.pdf")
-    msg.attach(pdf_part)
+    attachment = Attachment(
+        FileContent(pdf_content),
+        FileName("cronograma.pdf"),
+        file_type="application/pdf"
+    )
+    message.attachment = attachment
 
-    # Envia via servidor SMTP
+    # Envia via SendGrid
     try:
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-            server.login(sender_email, sender_password)
-            server.send_message(msg)
+        sg = SendGrid(sendgrid_api_key)
+        response = sg.send(message)
         print(f"✅ E-mail enviado com sucesso para {recipient_email}")
     except Exception as e:
         print("❌ Erro ao enviar e-mail:", e)
